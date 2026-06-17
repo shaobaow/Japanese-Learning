@@ -132,6 +132,126 @@ body{font-family:'Noto Sans JP',-apple-system,sans-serif;background:#f0f2f8;min-
 .wyours{color:#ef4444;}
 .rbtn{display:inline-block;padding:11px 24px;background:#3b82f6;color:white;border:none;border-radius:12px;font-size:14px;font-weight:800;cursor:pointer;margin:4px;}
 .rbtn2{display:inline-block;padding:11px 24px;background:#e5e7eb;color:#555;border:none;border-radius:12px;font-size:14px;font-weight:800;cursor:pointer;margin:4px;}
+
+/* ==== 合并新增 ==== */
+.main-tabs{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.main-tabs::-webkit-scrollbar{display:none;}
+.main-tab{flex:0 0 auto;white-space:nowrap;font-size:12px;padding:9px 12px;}
+.wd-setup,.wd-result{background:#fff;border-radius:14px;padding:18px 16px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.wd-setup h2{font-size:17px;color:#1e3a8a;margin-bottom:4px;}
+.wd-setup .desc{font-size:12px;color:#888;margin-bottom:14px;}
+.wd-row{margin-bottom:14px;}
+.wd-lbl{font-size:12px;color:#666;font-weight:700;margin-bottom:7px;}
+.wd-opts{display:flex;flex-wrap:wrap;gap:7px;}
+.wd-chip{padding:8px 13px;border-radius:10px;border:2px solid #e0e4f0;background:#f7f9ff;font-size:13px;font-weight:700;color:#444;cursor:pointer;}
+.wd-chip.on{background:#3b82f6;border-color:#3b82f6;color:#fff;}
+.wd-go{display:block;width:100%;margin-top:6px;padding:13px;border:none;border-radius:12px;background:#f59e0b;color:#fff;font-size:15px;font-weight:900;cursor:pointer;}
+.wd-pbar{height:6px;background:#e8ecf8;border-radius:4px;overflow:hidden;margin-bottom:10px;}
+.wd-pfill{height:100%;background:#3b82f6;width:0;transition:width .3s;}
+.wd-meta{display:flex;justify-content:space-between;font-size:12px;color:#888;font-weight:700;margin-bottom:12px;}
+.wd-card{background:#fff;border-radius:14px;padding:22px 18px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.wd-badge{display:inline-block;font-size:11px;font-weight:900;color:#fff;padding:2px 10px;border-radius:10px;margin-bottom:12px;}
+.wd-q{font-size:13px;color:#888;margin-bottom:6px;}
+.wd-target{font-size:30px;font-weight:900;color:#111;text-align:center;margin:10px 0 22px;line-height:1.4;}
+.wd-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;}
+.wd-opt{padding:15px 12px;border:2px solid #e0e4f0;border-radius:12px;background:#f7f9ff;font-size:17px;font-weight:700;color:#222;cursor:pointer;word-break:break-all;}
+.wd-opt.right{background:#e9f9ee;border-color:#10b981;color:#0a8a44;}
+.wd-opt.wrong{background:#fdeceb;border-color:#ef4444;color:#d3503e;}
+.wd-opt.dim{opacity:.45;}
+.wd-fb{margin-top:15px;padding:13px 14px;border-radius:11px;font-size:13px;line-height:1.7;display:none;}
+.wd-fb.ok{background:#e9f9ee;border-left:3px solid #10b981;}
+.wd-fb.ng{background:#fdeceb;border-left:3px solid #ef4444;}
+.wd-fb b{color:#1e3a8a;}
+.wd-next{display:none;width:100%;margin-top:14px;padding:13px;border:none;border-radius:12px;background:#1e3a8a;color:#fff;font-size:15px;font-weight:900;cursor:pointer;}
+.wd-sc{font-size:40px;font-weight:900;color:#1e3a8a;margin:6px 0;}
+.wd-rmsg{font-weight:700;font-size:15px;}
+.wd-rsub{font-size:12px;color:#888;margin-top:4px;}
+.wd-rwrong{text-align:left;margin-top:18px;}
+.wd-rwrong h3{font-size:13px;color:#ef4444;margin-bottom:8px;}
+.wd-witem{background:#fdeceb;border-radius:10px;padding:10px 12px;margin-bottom:7px;font-size:12.5px;}
+.wd-witem .a{color:#0a8a44;font-weight:700;margin-top:2px;}
+.wd-acts{display:flex;gap:10px;margin-top:18px;}
+.wd-acts button{flex:1;padding:13px;border:none;border-radius:12px;font-size:14px;font-weight:900;cursor:pointer;}
+.wd-retry{background:#f59e0b;color:#fff;}
+.wd-reset{background:#eef2fb;color:#333;}
+.kp-prog{background:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:14px;}
+.kp-ptop{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.kp-ptop .t{font-size:14px;font-weight:900;color:#1e3a8a;}
+.kp-ptop .pct{font-size:14px;font-weight:900;color:#f59e0b;}
+.kp-bar{height:7px;background:#e8ecf8;border-radius:4px;overflow:hidden;}
+.kp-bar i{display:block;height:100%;background:#f59e0b;width:0;transition:width .5s;}
+.kp-fil{display:flex;gap:7px;margin-bottom:12px;align-items:center;}
+.kp-fchip{padding:6px 13px;border-radius:18px;border:2px solid #e0e4f0;background:#fff;font-size:12px;font-weight:700;color:#666;cursor:pointer;}
+.kp-fchip.on{background:#1e3a8a;border-color:#1e3a8a;color:#fff;}
+.kp-reset{margin-left:auto;font-size:11px;color:#aaa;background:none;border:none;cursor:pointer;text-decoration:underline;}
+.kp-les{background:#fff;border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+.kp-lh{display:flex;align-items:center;gap:11px;padding:13px 14px;cursor:pointer;}
+.kp-lnum{flex-shrink:0;width:36px;height:36px;border-radius:9px;background:#1e3a8a;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;}
+.kp-lnum b{font-size:15px;}
+.kp-lnum span{font-size:8px;opacity:.7;}
+.kp-lt{flex:1;}
+.kp-lt .t{font-weight:700;font-size:14px;}
+.kp-lt .c{font-size:11px;color:#999;}
+.kp-lc{font-size:11px;font-weight:700;color:#3b82f6;background:#eef3ff;padding:3px 9px;border-radius:10px;white-space:nowrap;}
+.kp-lc.full{background:#e9f9ee;color:#10b981;}
+.kp-arr{width:8px;height:8px;border-right:2px solid #bbb;border-bottom:2px solid #bbb;transform:rotate(45deg);transition:.2s;}
+.kp-les.col .kp-arr{transform:rotate(-45deg);}
+.kp-les.col .kp-lb{display:none;}
+.kp-lb{border-top:1px solid #eef0f6;}
+.kp-pt{display:flex;gap:10px;padding:12px 14px;border-bottom:1px solid #f3f4f9;cursor:pointer;}
+.kp-pt:last-child{border-bottom:none;}
+.kp-box{flex-shrink:0;width:21px;height:21px;border-radius:6px;border:2px solid #ccd2e0;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.kp-box svg{width:11px;height:11px;opacity:0;}
+.kp-pt.done .kp-box{background:#10b981;border-color:#10b981;}
+.kp-pt.done .kp-box svg{opacity:1;}
+.kp-pc{flex:1;min-width:0;}
+.kp-jp{font-weight:700;font-size:14px;color:#222;}
+.kp-pt.done .kp-jp{color:#aaa;}
+.kp-cn{font-size:12px;color:#3b82f6;margin-top:1px;}
+.kp-ex{font-size:12px;color:#777;margin-top:5px;padding:6px 9px;background:#f7f9ff;border-radius:7px;border-left:2px solid #f59e0b;}
+.kp-tag{display:inline-block;font-size:9px;font-weight:700;padding:1px 6px;border-radius:5px;margin-left:6px;background:#fff0db;color:#b56a17;}
+.kp-empty{text-align:center;color:#888;padding:40px;font-size:13px;}
+.js-intro,.js-result{background:#fff;border-radius:14px;padding:18px 16px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.js-intro h2{font-size:17px;color:#1e3a8a;margin-bottom:4px;}
+.js-intro p{font-size:12px;color:#888;margin-bottom:14px;}
+.js-lbl{font-size:12px;color:#666;font-weight:700;margin-bottom:8px;}
+.js-cats{display:flex;flex-wrap:wrap;gap:8px;}
+.js-cat{padding:9px 14px;border-radius:10px;border:2px solid #e0e4f0;background:#f7f9ff;font-size:13px;font-weight:700;color:#333;cursor:pointer;}
+.js-cat .n{font-size:10px;color:#aaa;margin-left:4px;}
+.js-cat.on{background:#1e3a8a;border-color:#1e3a8a;color:#fff;}
+.js-cat.on .n{color:rgba(255,255,255,.7);}
+.js-go{display:block;width:100%;margin-top:18px;padding:13px;border:none;border-radius:12px;background:#f59e0b;color:#fff;font-size:15px;font-weight:900;cursor:pointer;}
+.js-pbar{height:6px;background:#e8ecf8;border-radius:4px;overflow:hidden;margin-bottom:10px;}
+.js-pfill{height:100%;background:#3b82f6;width:0;transition:width .3s;}
+.js-meta{display:flex;justify-content:space-between;font-size:12px;color:#888;font-weight:700;margin-bottom:14px;}
+.js-card{background:#fff;border-radius:14px;padding:20px 16px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.js-sent{font-size:18px;font-weight:700;line-height:2;text-align:center;margin:6px 0 20px;}
+.js-blank{display:inline-block;min-width:44px;border-bottom:2.5px dashed #f59e0b;color:#f59e0b;font-weight:900;text-align:center;margin:0 3px;}
+.js-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.js-opt{padding:14px;border:2px solid #e0e4f0;border-radius:12px;background:#f7f9ff;font-size:18px;font-weight:900;color:#222;cursor:pointer;transition:.13s;}
+.js-opt.right{background:#e9f9ee;border-color:#10b981;color:#0a8a44;}
+.js-opt.wrong{background:#fdeceb;border-color:#ef4444;color:#d3503e;}
+.js-opt.dim{opacity:.45;}
+.js-exp{margin-top:15px;padding:13px 14px;border-radius:11px;font-size:13px;line-height:1.7;display:none;}
+.js-exp.ok{background:#e9f9ee;border-left:3px solid #10b981;}
+.js-exp.ng{background:#fdeceb;border-left:3px solid #ef4444;}
+.js-exp .h{font-weight:900;margin-bottom:3px;}
+.js-exp.ok .h{color:#0a8a44;}
+.js-exp.ng .h{color:#d3503e;}
+.js-next{display:none;width:100%;margin-top:14px;padding:13px;border:none;border-radius:12px;background:#1e3a8a;color:#fff;font-size:15px;font-weight:900;cursor:pointer;}
+.js-sc{font-size:40px;font-weight:900;color:#1e3a8a;margin:6px 0;}
+.js-rmsg{font-weight:700;font-size:15px;}
+.js-rsub{font-size:12px;color:#888;margin-top:4px;}
+.js-rwrong{text-align:left;margin-top:18px;}
+.js-rwrong h3{font-size:13px;color:#ef4444;margin-bottom:8px;}
+.js-witem{background:#fdeceb;border-radius:10px;padding:10px 12px;margin-bottom:7px;font-size:12.5px;}
+.js-witem .s{font-weight:700;}
+.js-witem .a{color:#0a8a44;font-weight:700;margin-top:3px;}
+.js-witem .w{color:#888;margin-top:3px;}
+.js-acts{display:flex;gap:10px;margin-top:18px;}
+.js-acts button{flex:1;padding:13px;border:none;border-radius:12px;font-size:14px;font-weight:900;cursor:pointer;}
+.js-retry{background:#f59e0b;color:#fff;}
+.js-back{background:#eef2fb;color:#333;}
 </style>
 </head>
 <body>
@@ -142,7 +262,10 @@ body{font-family:'Noto Sans JP',-apple-system,sans-serif;background:#f0f2f8;min-
   <div class="main-tabs">
     <button class="main-tab active" onclick="switchMain('verb')">📝 动词</button>
     <button class="main-tab" onclick="switchMain('adj')">🌸 形容词</button>
-    <button class="main-tab" onclick="switchMain('quiz')">✏️ 练习</button>
+    <button class="main-tab" onclick="switchMain('word')">🎴 背单词</button>
+    <button class="main-tab" onclick="switchMain('quiz')">🔄 变形</button>
+    <button class="main-tab" onclick="switchMain('point')">📋 考点</button>
+    <button class="main-tab" onclick="switchMain('joshi')">✍️ 助词</button>
   </div>
 </div>
 
@@ -245,6 +368,97 @@ body{font-family:'Noto Sans JP',-apple-system,sans-serif;background:#f0f2f8;min-
     <div class="rwrong" id="rwrong"></div>
     <button class="rbtn" onclick="retryQ()">🔁 再练一次</button>
     <button class="rbtn2" onclick="backSetup()">⚙️ 重新设置</button>
+  </div>
+</div>
+
+<!-- ══ 背单词页 ══ -->
+<div class="page" id="page-word">
+  <div class="wd-setup" id="wd-setup">
+    <h2>🎴 单词背题</h2>
+    <div class="desc">选范围和题型，四选一，答完看完整词义。</div>
+    <div class="wd-row">
+      <div class="wd-lbl">范围</div>
+      <div class="wd-opts" id="wd-scope">
+        <div class="wd-chip on" onclick="wdPick('scope','all',this)">全部</div>
+        <div class="wd-chip" onclick="wdPick('scope','verb',this)">仅动词</div>
+        <div class="wd-chip" onclick="wdPick('scope','adj',this)">仅形容词</div>
+      </div>
+    </div>
+    <div class="wd-row">
+      <div class="wd-lbl">题型</div>
+      <div class="wd-opts" id="wd-type">
+        <div class="wd-chip on" onclick="wdPick('type','t2',this)">看中文 → 选日语</div>
+        <div class="wd-chip" onclick="wdPick('type','t1',this)">看日语 → 选读音</div>
+        <div class="wd-chip" onclick="wdPick('type','t3',this)">看读音 → 选日语</div>
+        <div class="wd-chip" onclick="wdPick('type','mix',this)">混合</div>
+      </div>
+    </div>
+    <button class="wd-go" onclick="wdStart()">🚀 开始背题</button>
+  </div>
+  <div id="wd-main" style="display:none">
+    <div class="wd-pbar"><div class="wd-pfill" id="wd-pfill"></div></div>
+    <div class="wd-meta"><span id="wd-prog">1/20</span><span id="wd-score">✅0</span></div>
+    <div class="wd-card">
+      <div class="wd-badge" id="wd-badge"></div>
+      <div class="wd-q" id="wd-qlabel"></div>
+      <div class="wd-target" id="wd-target"></div>
+      <div class="wd-grid" id="wd-opts2"></div>
+      <div class="wd-fb" id="wd-fb"></div>
+    </div>
+    <button class="wd-next" id="wd-next" onclick="wdNext()">下一题 →</button>
+  </div>
+  <div id="wd-result" style="display:none" class="wd-result">
+    <div style="font-size:46px" id="wd-em">🎉</div>
+    <div class="wd-sc" id="wd-rsc"></div>
+    <div class="wd-rmsg" id="wd-rmsg"></div>
+    <div class="wd-rsub" id="wd-rsub"></div>
+    <div class="wd-rwrong" id="wd-rwrong"></div>
+    <div class="wd-acts"><button class="wd-retry" onclick="wdStart()">再背一组</button><button class="wd-reset" onclick="wdBack()">换设置</button></div>
+  </div>
+</div>
+
+<!-- ══ 考点页 ══ -->
+<div class="page" id="page-point">
+  <div class="kp-prog">
+    <div class="kp-ptop"><span class="t" id="kp-big">考点进度</span><span class="pct" id="kp-pct">0%</span></div>
+    <div class="kp-bar"><i id="kp-barfill"></i></div>
+    <div style="font-size:11px;color:#999;margin-top:6px" id="kp-small">已掌握 0 / 0</div>
+  </div>
+  <div class="kp-fil">
+    <div class="kp-fchip on" onclick="kpFil('all',this)">全部</div>
+    <div class="kp-fchip" onclick="kpFil('todo',this)">未掌握</div>
+    <div class="kp-fchip" onclick="kpFil('done',this)">已掌握</div>
+    <button class="kp-reset" onclick="kpReset()">清空</button>
+  </div>
+  <div id="kp-wrap"></div>
+</div>
+
+<!-- ══ 助词页 ══ -->
+<div class="page" id="page-joshi">
+  <div id="js-setup" class="js-intro">
+    <h2>✍️ 助词强化</h2>
+    <p>选范围开始，每题答完讲清「为什么用这个助词」。</p>
+    <div class="js-lbl">练习范围</div>
+    <div class="js-cats" id="js-cats"></div>
+    <button class="js-go" onclick="jsStart()">开始练习 →</button>
+  </div>
+  <div id="js-main" style="display:none">
+    <div class="js-pbar"><div class="js-pfill" id="js-pfill"></div></div>
+    <div class="js-meta"><span id="js-prog">1/10</span><span id="js-score">✅0</span></div>
+    <div class="js-card">
+      <div class="js-sent" id="js-sent"></div>
+      <div class="js-grid" id="js-opts"></div>
+      <div class="js-exp" id="js-exp"><div class="h" id="js-exph"></div><div class="w" id="js-expw"></div></div>
+    </div>
+    <button class="js-next" id="js-next" onclick="jsNext()">下一题 →</button>
+  </div>
+  <div id="js-result" style="display:none" class="js-result">
+    <div style="font-size:46px" id="js-em">🎉</div>
+    <div class="js-sc" id="js-rsc"></div>
+    <div class="js-rmsg" id="js-rmsg"></div>
+    <div class="js-rsub" id="js-rsub"></div>
+    <div class="js-rwrong" id="js-rwrong"></div>
+    <div class="js-acts"><button class="js-retry" onclick="jsStart()">再练一次</button><button class="js-back" onclick="jsBack()">换范围</button></div>
   </div>
 </div>
 
@@ -411,6 +625,8 @@ function conjVerb(dict,type){
     const s=dict.replace(/る$/,"");
     return{masu:s+"ます",nai:s+"ない",te:s+"て",ta:s+"た",rT:"二类（一段）— 最简单",rB:`去掉「る」直接加词尾。词干「${s}」：<br><b>${s}ます</b> / <b>${s}ない</b> / <b>${s}て</b> / <b>${s}た</b>`};
   }
+  // ある是特殊一类动词，ない形直接是「ない」
+  if(dict==="ある") return{masu:"あります",nai:"ない",te:"あって",ta:"あった",rT:"特殊一类动词 — ある",rB:"「ある」的否定形不是「あらない」，而是直接用<b>「ない」</b>！<br>ます形：<b>あります</b>　ない形：<b>ない</b>　て形：<b>あって</b>　た形：<b>あった</b>"};
   const e=dict.slice(-1),s=dict.slice(0,-1);
   const im={う:"い",く:"き",ぐ:"ぎ",す:"し",つ:"ち",ぬ:"に",ぶ:"び",む:"み",る:"り"};
   const am={う:"わ",く:"か",ぐ:"が",す:"さ",つ:"た",ぬ:"な",ぶ:"ば",む:"ま",る:"ら"};
@@ -455,7 +671,7 @@ function conjAdj(word,type){
 // ══════════════════════════════════════════════
 function switchMain(tab){
   document.querySelectorAll('.main-tab').forEach((b,i)=>{
-    b.classList.toggle('active',['verb','adj','quiz'][i]===tab);
+    b.classList.toggle('active',['verb','adj','word','quiz','point','joshi'][i]===tab);
   });
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+tab).classList.add('active');
@@ -728,6 +944,353 @@ function backSetup(){
   document.getElementById('qmain').style.display='none';
   document.getElementById('qsetup').style.display='block';
 }
+
+/* ==== 合并新增模块 ==== */
+const KPDATA = [
+ {n:1,t:"判断句·基础",c:"です / の / も",pts:[
+   {jp:"N1は N2です",cn:"N1是N2",ex:["わたしは 学生です。","我是学生。"]},
+   {jp:"N1は N2じゃ ありません",cn:"N1不是N2（否定）",ex:["田中さんは 先生じゃ ありません。","田中先生不是老师。"]},
+   {jp:"〜ですか",cn:"疑问句末加か",ex:["あなたは 中国人ですか。","你是中国人吗？"]},
+   {jp:"N1の N2",cn:"の表示所属/修饰（的）",ex:["わたしの 本です。","我的书。"]},
+   {jp:"N1も N2です",cn:"も＝也",ex:["わたしも 学生です。","我也是学生。"]},
+ ]},
+ {n:2,t:"指示代词·物",c:"これ/それ/あれ",pts:[
+   {jp:"これ・それ・あれ",cn:"这个/那个/那个（远）— 指物",ex:["これは ペンです。","这是钢笔。"]},
+   {jp:"この・その・あの＋N",cn:"后接名词修饰",ex:["この 本は わたしのです。","这本书是我的。"]},
+   {jp:"そうです / そうじゃ ありません",cn:"是的/不是（确认回答）",ex:["はい、そうです。","是的，没错。"]},
+   {jp:"〜は N1ですか、N2ですか",cn:"二选一疑问",ex:["これは 本ですか、ノートですか。","这是书还是笔记本？"]},
+   {jp:"〜の（省略名词）",cn:"の代替前面提过的名词",ex:["これは わたしのです。","这是我的（东西）。"]},
+ ]},
+ {n:3,t:"指示代词·场所",c:"ここ/そこ/あそこ",pts:[
+   {jp:"ここ・そこ・あそこ",cn:"这里/那里/那里（远）",ex:["ここは 教室です。","这里是教室。"]},
+   {jp:"こちら・そちら・あちら",cn:"方向/场所的礼貌说法",ex:["こちらは 田中さんです。","这位是田中先生。"]},
+   {jp:"N は 場所です",cn:"某物在某处",ex:["トイレは あそこです。","厕所在那边。"]},
+   {jp:"どこ / どちら",cn:"哪里（どちら更礼貌）",ex:["お国は どちらですか。","您是哪国人？"]},
+ ]},
+ {n:4,t:"时间·动词时态",c:"时间に / ました",pts:[
+   {jp:"今 〜時〜分です",cn:"现在几点几分",ex:["今 9時半です。","现在9点半。"]},
+   {jp:"時間に 動詞",cn:"具体时刻＋に＋动作",ex:["7時に 起きます。","7点起床。",1]},
+   {jp:"动词 ます/ません",cn:"现在·将来 肯定/否定",ex:["毎日 勉強します。","每天学习。"]},
+   {jp:"动词 ました/ませんでした",cn:"过去 肯定/否定",ex:["昨日 働きました。","昨天工作了。",1]},
+   {jp:"N1から N2まで",cn:"从…到…（时间/地点）",ex:["9時から 5時まで。","从9点到5点。"]},
+ ]},
+ {n:5,t:"移动动词",c:"へ / で / と",pts:[
+   {jp:"場所へ 行きます/来ます/帰ります",cn:"へ表示移动方向",ex:["学校へ 行きます。","去学校。",1]},
+   {jp:"交通工具で 行きます",cn:"で表示交通手段",ex:["バスで 行きます。","坐公交去。"]},
+   {jp:"人と 行きます",cn:"と＝和…一起",ex:["友達と 行きます。","和朋友一起去。"]},
+   {jp:"いつ",cn:"疑问词：什么时候（不加に）",ex:["いつ 日本へ 来ましたか。","什么时候来日本的？"]},
+ ]},
+ {n:6,t:"宾语·邀约",c:"を / で / ませんか",pts:[
+   {jp:"N を 動詞",cn:"を表示动作对象（宾语）",ex:["ごはんを 食べます。","吃饭。",1]},
+   {jp:"場所で 動詞",cn:"で表示动作发生地点",ex:["図書館で 勉強します。","在图书馆学习。",1]},
+   {jp:"〜ませんか",cn:"邀请：要不要一起…？",ex:["一緒に 行きませんか。","要不要一起去？",1]},
+   {jp:"〜ましょう",cn:"提议：…吧",ex:["休みましょう。","休息吧。"]},
+ ]},
+ {n:7,t:"手段·授受",c:"で / あげます / もらいます",pts:[
+   {jp:"道具で 動詞",cn:"で表示工具/方法",ex:["はしで 食べます。","用筷子吃。",1]},
+   {jp:"〜は 言語で 〜です",cn:"用某语言怎么说",ex:["これは 日本語で 何ですか。","这个日语怎么说？"]},
+   {jp:"人に N を あげます",cn:"给别人东西（给出去）",ex:["友達に 花を あげます。","送花给朋友。",1]},
+   {jp:"人に N を もらいます",cn:"从别人那得到（收进来）",ex:["先生に 本を もらいました。","从老师那得到书。",1]},
+   {jp:"もう 〜ましたか",cn:"已经…了吗？否定答まだです",ex:["もう 食べましたか。","已经吃了吗？"]},
+ ]},
+ {n:8,t:"形容词",c:"い形 / な形",pts:[
+   {jp:"N は い形容词です",cn:"い形容词作谓语",ex:["この 本は おもしろいです。","这本书有趣。",1]},
+   {jp:"N は な形容词です",cn:"な形容词作谓语（です结尾）",ex:["この 町は きれいです。","这个城市漂亮。",1]},
+   {jp:"い形容词＋N",cn:"い形直接修饰名词",ex:["新しい 車。","新车。"]},
+   {jp:"な形容词＋な＋N",cn:"な形要加な修饰名词",ex:["きれいな 花。","漂亮的花。",1]},
+   {jp:"とても / あまり",cn:"很 / 不太（あまり接否定）",ex:["あまり おいしくないです。","不太好吃。",1]},
+ ]},
+ {n:9,t:"喜好·能力·原因",c:"が / から",pts:[
+   {jp:"〜が 好き/嫌い です",cn:"喜欢/讨厌，对象用が",ex:["音楽が 好きです。","喜欢音乐。",1]},
+   {jp:"〜が 上手/下手 です",cn:"擅长/不擅长，对象用が",ex:["日本語が 上手です。","日语好。"]},
+   {jp:"〜が わかります/あります",cn:"懂/有，对象用が",ex:["漢字が わかります。","懂汉字。"]},
+   {jp:"〜から（原因）",cn:"因为…（理由放前句）",ex:["寒いですから、行きません。","因为冷，不去。",1]},
+   {jp:"どうして",cn:"疑问词：为什么",ex:["どうして 行きませんか。","为什么不去？"]},
+ ]},
+ {n:10,t:"存在句",c:"あります / います",pts:[
+   {jp:"場所に N が あります",cn:"某处有（无生命物）",ex:["机の上に 本が あります。","桌上有书。",1]},
+   {jp:"場所に N が います",cn:"某处有（人/动物）",ex:["部屋に 猫が います。","房间里有猫。",1]},
+   {jp:"N は 場所に あります/います",cn:"某物/某人在某处",ex:["猫は どこに いますか。","猫在哪？"]},
+   {jp:"位置词（上/下/前/後ろ…）",cn:"N の 上/中/となり 等",ex:["銀行の となりに あります。","在银行旁边。",1]},
+ ]},
+ {n:11,t:"数量词",c:"数 / 回",pts:[
+   {jp:"数量词（〜つ/〜人/〜枚…）",cn:"各类量词数法",ex:["りんごを 三つ 買います。","买三个苹果。",1]},
+   {jp:"数量词＋動詞",cn:"数量词直接放动词前（不加助词）",ex:["切手を 5枚 ください。","请给我5张邮票。",1]},
+   {jp:"期间に 回数",cn:"一段时间内…次",ex:["1週間に 2回。","一周两次。",1]},
+   {jp:"〜だけ",cn:"只、仅仅",ex:["一人だけ 来ました。","只来了一个人。"]},
+ ]},
+ {n:12,t:"形容词过去·比较",c:"かったです / より",pts:[
+   {jp:"い形容词 〜かったです",cn:"い形过去式",ex:["旅行は 楽しかったです。","旅行很开心。",1]},
+   {jp:"な形容词 〜でした",cn:"な形过去式",ex:["きれいでした。","很漂亮（过去）。",1]},
+   {jp:"N1は N2より 形容词",cn:"N1比N2…",ex:["車は 自転車より 速いです。","车比自行车快。",1]},
+   {jp:"N1と N2と どちらが…",cn:"两者哪个更…",ex:["夏と 冬と どちらが 好きですか。","夏天和冬天更喜欢哪个？",1]},
+   {jp:"〜の中で 何/だれ が 一番…",cn:"在…之中哪个最…",ex:["果物で 何が 一番 好きですか。","水果里最喜欢什么？",1]},
+ ]},
+ {n:13,t:"愿望·目的",c:"ほしい / たい / に行く",pts:[
+   {jp:"N が ほしいです",cn:"想要某物",ex:["新しい パソコンが ほしいです。","想要新电脑。",1]},
+   {jp:"动词ます形 〜たいです",cn:"想做某事",ex:["日本へ 行きたいです。","想去日本。",1]},
+   {jp:"場所へ V(ます)に 行きます",cn:"去某地做某事（目的）",ex:["デパートへ 買い物に 行きます。","去百货公司购物。",1]},
+ ]},
+ {n:14,t:"动词て形·请求",c:"て形 / てください / ています",pts:[
+   {jp:"动词 て形",cn:"て形变换规则（核心！）",ex:["書く→書いて、食べる→食べて","",1]},
+   {jp:"〜てください",cn:"请做…（请求/指示）",ex:["ちょっと 待ってください。","请稍等。",1]},
+   {jp:"〜ています（进行）",cn:"正在做…",ex:["今 食べています。","正在吃。",1]},
+   {jp:"〜ましょうか",cn:"我来…吧（提议帮忙）",ex:["手伝いましょうか。","我来帮忙吧？"]},
+ ]},
+ {n:15,t:"许可·禁止·状态",c:"てもいい / てはいけない",pts:[
+   {jp:"〜てもいいです",cn:"可以做…（许可）",ex:["写真を 撮っても いいです。","可以拍照。",1]},
+   {jp:"〜ては いけません",cn:"不可以…（禁止）",ex:["ここで たばこを 吸っては いけません。","这里不能抽烟。",1]},
+   {jp:"〜ています（状态/职业/习惯）",cn:"持续状态、从事职业",ex:["銀行で 働いています。","在银行工作。",1]},
+ ]},
+ {n:16,t:"动作连接·描述",c:"てから / は…が",pts:[
+   {jp:"V₁て、V₂て、V₃",cn:"依次做几个动作",ex:["朝 起きて、ごはんを 食べて、学校へ 行きます。","早上起床、吃饭、去学校。",1]},
+   {jp:"〜てから",cn:"做完…之后再…",ex:["勉強してから、寝ます。","学习之后睡觉。",1]},
+   {jp:"N1は N2が 形容词",cn:"主题＋局部描述",ex:["日本は 食べ物が おいしいです。","日本食物好吃。",1]},
+   {jp:"どうやって",cn:"疑问词：怎样、如何（方式）",ex:["どうやって 行きますか。","怎么去？"]},
+ ]},
+ {n:17,t:"动词ない形",c:"ない / なければ / なくても",pts:[
+   {jp:"动词 ない形",cn:"ない形变换规则（核心！）",ex:["行く→行かない、食べる→食べない","",1]},
+   {jp:"〜ないでください",cn:"请不要做…",ex:["ここに 入らないでください。","请别进这里。",1]},
+   {jp:"〜なければ なりません",cn:"必须做…",ex:["薬を 飲まなければ なりません。","必须吃药。",1]},
+   {jp:"〜なくても いいです",cn:"不做…也可以（不必）",ex:["来なくても いいです。","不来也行。",1]},
+ ]},
+];
+const JSQUIZ = [
+ {s:["これ","ノートです。"],a:"は",o:["は","が","を","の"],c:"hg",w:"「は」提示主题，陈述「这个是…」。が用于强调或回答疑问。"},
+ {s:["だれ","来ましたか。"],a:"が",o:["が","は","を","に"],c:"hg",w:"疑问词（だれ/なに/どれ）作主语时用「が」，不能用は。"},
+ {s:["部屋に 猫","います。"],a:"が",o:["が","は","を","に"],c:"hg",w:"存在句里「存在的主体」用が：場所に〜が います。"},
+ {s:["音楽","好きです。"],a:"が",o:["が","を","は","に"],c:"hg",w:"好き/嫌い/上手/下手 的对象用「が」，不是を。"},
+ {s:["日本語","わかります。"],a:"が",o:["が","を","は","で"],c:"hg",w:"わかる/できる/ある 的对象用「が」。"},
+ {s:["田中さん","先生です。"],a:"は",o:["は","が","も","を"],c:"hg",w:"陈述某人的身份，主题用「は」。"},
+ {s:["ごはん","食べます。"],a:"を",o:["を","が","に","で"],c:"wo",w:"「を」标记动作的直接对象（宾语）。"},
+ {s:["何","買いますか。"],a:"を",o:["を","が","に","で"],c:"wo",w:"动作对象用「を」：「买什么」。"},
+ {s:["毎日 日本語","勉強します。"],a:"を",o:["を","に","で","が"],c:"wo",w:"勉強する 的对象用「を」。"},
+ {s:["公園","散歩します。"],a:"を",o:["を","で","に","へ"],c:"wo",w:"散歩/歩く 经过的场所用「を」（移动通过的路径）。"},
+ {s:["写真","撮ります。"],a:"を",o:["を","が","で","に"],c:"wo",w:"撮る 的对象（照片）用「を」。"},
+ {s:["7時","起きます。"],a:"に",o:["に","で","を","へ"],c:"ni",w:"具体时刻＋に。注意「今日/明日」等相对时间不加に。"},
+ {s:["机の上","本が あります。"],a:"に",o:["に","で","を","へ"],c:"ni",w:"存在的场所用「に」：場所に〜が あります。"},
+ {s:["友達","花を あげます。"],a:"に",o:["に","と","を","へ"],c:"ni",w:"授受动作「给谁」的对象用「に」。"},
+ {s:["1週間","2回 運動します。"],a:"に",o:["に","で","を","から"],c:"ni",w:"一段时间内的次数/频率用「に」。"},
+ {s:["図書館","本を 返します。"],a:"に",o:["に","で","を","へ"],c:"ni",w:"返す/入れる 的归着点（放到哪）用「に」。"},
+ {s:["図書館","勉強します。"],a:"で",o:["で","に","を","へ"],c:"de",w:"动作发生的场所用「で」（区别于存在的に）。"},
+ {s:["バス","行きます。"],a:"で",o:["で","に","を","と"],c:"de",w:"交通工具/手段用「で」。"},
+ {s:["はし","食べます。"],a:"で",o:["で","を","に","と"],c:"de",w:"工具/方法用「で」。"},
+ {s:["日本語","話します。"],a:"で",o:["で","を","に","と"],c:"de",w:"用某种语言/方式用「で」。"},
+ {s:["デパート","かばんを 買います。"],a:"で",o:["で","に","を","へ"],c:"de",w:"动作发生的场所用「で」。"},
+ {s:["学校","行きます。"],a:"へ",o:["へ","を","で","が"],c:"ht",w:"移动方向/目的地用「へ」（に也可，へ更强调方向）。"},
+ {s:["友達","映画を 見ます。"],a:"と",o:["と","に","で","を"],c:"ht",w:"「と」表示「和…一起」做某事。"},
+ {s:["弟","けんかしました。"],a:"と",o:["と","に","を","で"],c:"ht",w:"互相性动作（けんか/結婚/話す）的对方用「と」。"},
+ {s:["コーヒー","紅茶と どちらが 好きですか。"],a:"と",o:["と","は","が","も"],c:"ht",w:"N1とN2と どちらが…：比较两者用「と」。"},
+ {s:["来月 日本","帰ります。"],a:"へ",o:["へ","で","を","が"],c:"ht",w:"帰る 的目的地/方向用「へ」。"},
+ {s:["9時","働きます。"],a:"から",o:["から","まで","に","で"],c:"km",w:"「から」表示起点（从…开始）。"},
+ {s:["5時","休みます。"],a:"まで",o:["まで","から","に","を"],c:"km",w:"「まで」表示终点（到…为止）。"},
+ {s:["駅","家まで 歩きます。"],a:"から",o:["から","まで","に","で"],c:"km",w:"から〜まで：从…到…的范围。"},
+ {s:["寒いです","、行きません。"],a:"から",o:["から","まで","が","に"],c:"km",w:"句末「から」表示原因（因为…）。"},
+ {s:["田中さんは 学生です。わたし","学生です。"],a:"も",o:["も","は","が","と"],c:"mo",w:"与前句同类「我也是」，用「も」。"},
+ {s:["日曜日","どこへも 行きません。"],a:"は",o:["は","も","を","に"],c:"mo",w:"主题对比用「は」：（至于）星期天，哪也不去。"},
+];
+const JSCATS=[["all","综合随机"],["hg","は·が"],["wo","を"],["ni","に"],["de","で"],["ht","へ·と"],["km","から·まで"],["mo","も·综合"]];
+/* ════ 背单词 ════ */
+let wdScope='all',wdType='t2',wdList=[],wdIdx=0,wdOk=0,wdWrong=[],wdLock=false;
+function wdPick(g,v,el){
+  el.parentNode.querySelectorAll('.wd-chip').forEach(x=>x.classList.remove('on'));
+  el.classList.add('on');
+  if(g==='scope')wdScope=v;else wdType=v;
+}
+function wdPool(scope){
+  let a=[];
+  if(scope!=='adj')VERBS.forEach(v=>a.push({disp:v[1],read:v[2],mean:v[3],k:'动词'}));
+  if(scope!=='verb')ADJS.forEach(x=>a.push({disp:x[0],read:x[1],mean:x[2],k:'形容词'}));
+  return a;
+}
+function wdField(t){return t==='t1'?'read':'disp';}
+function wdPrompt(w,t){return t==='t1'?w.disp:t==='t3'?w.read:w.mean;}
+function wdQlabel(t){return t==='t1'?'选择正确的读音（假名）':t==='t3'?'选择对应的日语词':'选择对应的日语词';}
+function wdStart(){
+  const pool=wdPool(wdScope);
+  function makeOne(w,t){
+    const f=wdField(t),ans=w[f];
+    const seen=new Set([ans]),distract=[];
+    shuffle(pool.filter(x=>x[f]!==ans)).forEach(x=>{if(distract.length<3&&!seen.has(x[f])){seen.add(x[f]);distract.push(x[f]);}});
+    if(distract.length<3)return null;
+    return {w,t,ans,opts:shuffle([ans,...distract])};
+  }
+  let qs=[];
+  if(wdType==='mix'){
+    shuffle(pool).slice(0,40).forEach(w=>{
+      let t=['t1','t2','t3'][Math.floor(Math.random()*3)];
+      if((t==='t1'||t==='t3')&&w.disp===w.read)t='t2';
+      const q=makeOne(w,t);if(q)qs.push(q);
+    });
+  }else{
+    let targets=(wdType==='t1'||wdType==='t3')?pool.filter(w=>w.disp!==w.read):pool;
+    shuffle(targets).forEach(w=>{const q=makeOne(w,wdType);if(q)qs.push(q);});
+  }
+  qs=qs.slice(0,20);
+  if(!qs.length){alert('该范围+题型没有合适的题目。\n形容词多为纯假名，建议用「看中文→选日语」。');return;}
+  wdList=qs;wdIdx=0;wdOk=0;wdWrong=[];
+  document.getElementById('wd-setup').style.display='none';
+  document.getElementById('wd-result').style.display='none';
+  document.getElementById('wd-main').style.display='block';
+  wdShow();
+}
+function wdShow(){
+  wdLock=false;const q=wdList[wdIdx];
+  document.getElementById('wd-prog').textContent=(wdIdx+1)+'/'+wdList.length;
+  document.getElementById('wd-score').textContent='✅'+wdOk;
+  document.getElementById('wd-pfill').style.width=(wdIdx/wdList.length*100)+'%';
+  const badge=document.getElementById('wd-badge');
+  badge.textContent=q.w.k;badge.style.background=q.w.k==='动词'?'#3b82f6':'#10b981';
+  document.getElementById('wd-qlabel').textContent=wdQlabel(q.t);
+  document.getElementById('wd-target').textContent=wdPrompt(q.w,q.t);
+  const box=document.getElementById('wd-opts2');box.innerHTML='';
+  q.opts.forEach(o=>{
+    const b=document.createElement('button');b.className='wd-opt';b.textContent=o;
+    b.addEventListener('click',()=>wdAns(b,o,q));
+    box.appendChild(b);
+  });
+  const fb=document.getElementById('wd-fb');fb.style.display='none';fb.className='wd-fb';
+  document.getElementById('wd-next').style.display='none';
+}
+function wdAns(btn,chosen,q){
+  if(wdLock)return;wdLock=true;
+  const ok=chosen===q.ans;
+  document.querySelectorAll('#wd-opts2 .wd-opt').forEach(b=>{
+    if(b.textContent===q.ans)b.classList.add('right');
+    else if(b===btn)b.classList.add('wrong');
+    else b.classList.add('dim');
+  });
+  if(ok)wdOk++;else wdWrong.push({disp:q.w.disp,read:q.w.read,mean:q.w.mean,ans:q.ans,chosen});
+  document.getElementById('wd-score').textContent='✅'+wdOk;
+  const fb=document.getElementById('wd-fb');fb.className='wd-fb '+(ok?'ok':'ng');fb.style.display='block';
+  fb.innerHTML=(ok?'<b>正解！</b> ':'<b>正确答案：'+q.ans+'</b><br>')+q.w.disp+'　【'+q.w.read+'】　'+q.w.mean;
+  document.getElementById('wd-next').style.display='block';
+}
+function wdNext(){wdIdx++;if(wdIdx>=wdList.length)wdRes();else wdShow();}
+function wdRes(){
+  document.getElementById('wd-main').style.display='none';
+  document.getElementById('wd-result').style.display='block';
+  const tot=wdList.length,pct=Math.round(wdOk/tot*100);
+  document.getElementById('wd-rsc').textContent=wdOk+' / '+tot;
+  const m=[[90,'🏆','单词高手！','记得很牢，继续保持！'],[70,'🎉','很不错！','大部分都记住了。'],[50,'👍','在进步！','错的词多看几眼。'],[0,'💪','加油！','重点复习错词，再来一组。']];
+  const r=m.find(x=>pct>=x[0]);
+  document.getElementById('wd-em').textContent=r[1];
+  document.getElementById('wd-rmsg').textContent=r[2];
+  document.getElementById('wd-rsub').textContent=r[3];
+  const wd=document.getElementById('wd-rwrong');
+  wd.innerHTML=wdWrong.length?'<h3>❌ 错词回顾（'+wdWrong.length+'）</h3>'+wdWrong.map(x=>'<div class="wd-witem"><b>'+x.disp+'</b>　'+x.read+'　'+x.mean+'<div class="a">✅ '+x.ans+'（你选了 '+x.chosen+'）</div></div>').join(''):'<div style="color:#10b981;font-weight:700;margin-top:10px">全对！👏</div>';
+}
+function wdBack(){
+  document.getElementById('wd-result').style.display='none';
+  document.getElementById('wd-main').style.display='none';
+  document.getElementById('wd-setup').style.display='block';
+}
+
+/* ════ 考点清单 ════ */
+const KP_TICK='<svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const KPKEY='n5_review_v1';
+let kpDone={};try{kpDone=JSON.parse(localStorage.getItem(KPKEY)||'{}');}catch(e){kpDone={};}
+let kpFilter='all';
+const KPTOTAL=KPDATA.reduce((s,l)=>s+l.pts.length,0);
+const kpId=(l,i)=>l+'-'+i;
+const kpIsDone=(l,i)=>!!kpDone[kpId(l,i)];
+function kpRender(){
+  const wrap=document.getElementById('kp-wrap');wrap.innerHTML='';let shown=0;
+  KPDATA.forEach(les=>{
+    const items=les.pts.map((p,i)=>({p,i})).filter(o=>kpFilter==='done'?kpIsDone(les.n,o.i):kpFilter==='todo'?!kpIsDone(les.n,o.i):true);
+    if(!items.length)return;shown+=items.length;
+    const dn=les.pts.filter((_,i)=>kpIsDone(les.n,i)).length,full=dn===les.pts.length;
+    const col=(kpFilter==='all'&&full)?'col':'';
+    const d=document.createElement('div');d.className='kp-les '+col;
+    d.innerHTML='<div class="kp-lh"><div class="kp-lnum"><b>'+les.n+'</b><span>課</span></div><div class="kp-lt"><div class="t">'+les.t+'</div><div class="c">'+les.c+'</div></div><div class="kp-lc '+(full?'full':'')+'">'+dn+'/'+les.pts.length+'</div><div class="kp-arr"></div></div><div class="kp-lb">'+items.map(o=>'<div class="kp-pt '+(kpIsDone(les.n,o.i)?'done':'')+'" data-l="'+les.n+'" data-i="'+o.i+'"><div class="kp-box">'+KP_TICK+'</div><div class="kp-pc"><div class="kp-jp">'+o.p.jp+(o.p.ex[2]?'<span class="kp-tag">重点</span>':'')+'</div><div class="kp-cn">'+o.p.cn+'</div>'+(o.p.ex[0]?'<div class="kp-ex">'+o.p.ex[0]+(o.p.ex[1]?'　'+o.p.ex[1]:'')+'</div>':'')+'</div></div>').join('')+'</div>';
+    d.querySelector('.kp-lh').addEventListener('click',()=>d.classList.toggle('col'));
+    d.querySelectorAll('.kp-pt').forEach(el=>el.addEventListener('click',()=>kpToggle(+el.dataset.l,+el.dataset.i)));
+    wrap.appendChild(d);
+  });
+  if(!shown)wrap.innerHTML='<div class="kp-empty">'+(kpFilter==='done'?'还没有掌握的考点':'全部掌握啦 🎉')+'</div>';
+  kpProg();
+}
+function kpToggle(l,i){const k=kpId(l,i);if(kpDone[k])delete kpDone[k];else kpDone[k]=1;localStorage.setItem(KPKEY,JSON.stringify(kpDone));kpRender();}
+function kpProg(){
+  const c=Object.keys(kpDone).length,pct=KPTOTAL?Math.round(c/KPTOTAL*100):0;
+  document.getElementById('kp-pct').textContent=pct+'%';
+  document.getElementById('kp-barfill').style.width=pct+'%';
+  document.getElementById('kp-small').textContent='已掌握 '+c+' / '+KPTOTAL;
+  document.getElementById('kp-big').textContent=pct>=100?'全部掌握 🏆':'考点进度';
+}
+function kpFil(f,el){document.querySelectorAll('.kp-fchip').forEach(x=>x.classList.remove('on'));el.classList.add('on');kpFilter=f;kpRender();}
+function kpReset(){if(confirm('确定清空考点进度？此操作无法撤销。')){kpDone={};localStorage.removeItem(KPKEY);kpFilter='all';document.querySelectorAll('.kp-fchip').forEach((x,i)=>x.classList.toggle('on',i===0));kpRender();}}
+
+/* ════ 助词练习 ════ */
+let jsCat='all',jsList=[],jsIdx=0,jsOk=0,jsWrong=[],jsLock=false;
+function jsBuildCats(){
+  const g=document.getElementById('js-cats');g.innerHTML='';
+  JSCATS.forEach(pair=>{
+    const k=pair[0],label=pair[1];
+    const n=k==='all'?JSQUIZ.length:JSQUIZ.filter(q=>q.c===k).length;
+    const d=document.createElement('div');d.className='js-cat'+(k==='all'?' on':'');
+    d.innerHTML=label+'<span class="n">'+n+'</span>';
+    d.addEventListener('click',()=>{g.querySelectorAll('.js-cat').forEach(x=>x.classList.remove('on'));d.classList.add('on');jsCat=k;});
+    g.appendChild(d);
+  });
+}
+function jsStart(){
+  const pool=jsCat==='all'?JSQUIZ:JSQUIZ.filter(q=>q.c===jsCat);
+  jsList=shuffle(pool);jsIdx=0;jsOk=0;jsWrong=[];
+  document.getElementById('js-setup').style.display='none';
+  document.getElementById('js-result').style.display='none';
+  document.getElementById('js-main').style.display='block';
+  jsShow();
+}
+function jsShow(){
+  jsLock=false;const q=jsList[jsIdx];
+  document.getElementById('js-prog').textContent=(jsIdx+1)+'/'+jsList.length;
+  document.getElementById('js-score').textContent='✅'+jsOk;
+  document.getElementById('js-pfill').style.width=(jsIdx/jsList.length*100)+'%';
+  document.getElementById('js-sent').innerHTML=q.s[0]+'<span class="js-blank" id="js-blank">？</span>'+q.s[1];
+  const box=document.getElementById('js-opts');box.innerHTML='';
+  shuffle(q.o).forEach(o=>{
+    const b=document.createElement('button');b.className='js-opt';b.textContent=o;
+    b.addEventListener('click',()=>jsAns(b,o,q));
+    box.appendChild(b);
+  });
+  const e=document.getElementById('js-exp');e.style.display='none';e.className='js-exp';
+  document.getElementById('js-next').style.display='none';
+}
+function jsAns(btn,chosen,q){
+  if(jsLock)return;jsLock=true;const ok=chosen===q.a;
+  document.querySelectorAll('#js-opts .js-opt').forEach(b=>{if(b.textContent===q.a)b.classList.add('right');else if(b===btn)b.classList.add('wrong');else b.classList.add('dim');});
+  document.getElementById('js-blank').textContent=q.a;
+  if(ok)jsOk++;else jsWrong.push({s:q.s[0]+'（'+q.a+'）'+q.s[1],a:q.a,w:q.w,chosen});
+  document.getElementById('js-score').textContent='✅'+jsOk;
+  const e=document.getElementById('js-exp');e.className='js-exp '+(ok?'ok':'ng');e.style.display='block';
+  document.getElementById('js-exph').textContent=ok?'正解！◯':'正解は「'+q.a+'」';
+  document.getElementById('js-expw').textContent=q.w;
+  document.getElementById('js-next').style.display='block';
+}
+function jsNext(){jsIdx++;if(jsIdx>=jsList.length)jsRes();else jsShow();}
+function jsRes(){
+  document.getElementById('js-main').style.display='none';
+  document.getElementById('js-result').style.display='block';
+  const tot=jsList.length,pct=Math.round(jsOk/tot*100);
+  document.getElementById('js-rsc').textContent=jsOk+' / '+tot;
+  const m=[[90,'🏆','助词大师！','这块稳了！'],[70,'🎉','很不错！','错的看懂解释。'],[50,'👍','在进步！','多刷几次。'],[0,'💪','别灰心！','重点看错题解释。']];
+  const r=m.find(x=>pct>=x[0]);
+  document.getElementById('js-em').textContent=r[1];
+  document.getElementById('js-rmsg').textContent=r[2];
+  document.getElementById('js-rsub').textContent=r[3];
+  const wd=document.getElementById('js-rwrong');
+  wd.innerHTML=jsWrong.length?'<h3>❌ 错题回顾（'+jsWrong.length+'）</h3>'+jsWrong.map(x=>'<div class="js-witem"><div class="s">'+x.s+'</div><div class="a">✅ '+x.a+'（你选了 '+x.chosen+'）</div><div class="w">'+x.w+'</div></div>').join(''):'<div style="color:#10b981;font-weight:700;margin-top:10px">全对！👏</div>';
+}
+function jsBack(){
+  document.getElementById('js-result').style.display='none';
+  document.getElementById('js-main').style.display='none';
+  document.getElementById('js-setup').style.display='block';
+}
+
+/* 初始化新模块 */
+kpRender();jsBuildCats();
+
 </script>
 </body>
 </html>
