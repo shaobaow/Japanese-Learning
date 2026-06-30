@@ -162,6 +162,16 @@ body{font-family:'Noto Sans JP',-apple-system,sans-serif;background:#f0f2f8;min-
 .wd-fb.ok{background:#e9f9ee;border-left:3px solid #10b981;}
 .wd-fb.ng{background:#fdeceb;border-left:3px solid #ef4444;}
 .wd-fb b{color:#1e3a8a;}
+.wd-master{width:100%;margin-top:10px;padding:11px;border:1.5px dashed #10b981;border-radius:10px;background:#f3fbf5;color:#0a8a44;font-size:13px;font-weight:700;cursor:pointer;}
+.wd-master:active{background:#e3f6e9;}
+.wd-resetm{display:block;margin:10px auto 0;background:none;border:none;color:#aaa;font-size:11px;text-decoration:underline;cursor:pointer;}
+.wd-mlist{max-height:240px;overflow-y:auto;margin-top:8px;border-top:1px solid #eef0f6;padding-top:8px;}
+.wd-mitem{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 4px;border-bottom:1px solid #f3f4f9;font-size:12.5px;}
+.wd-mitem:last-child{border-bottom:none;}
+.wd-mtxt{flex:1;min-width:0;color:#333;}
+.wd-mtxt b{color:#1e3a8a;font-size:13.5px;}
+.wd-mcancel{flex-shrink:0;padding:5px 11px;border:1.5px solid #ef4444;border-radius:8px;background:#fdeceb;color:#d3503e;font-size:11.5px;font-weight:700;cursor:pointer;}
+.wd-mcancel:active{background:#fbdada;}
 .wd-next{display:none;width:100%;margin-top:14px;padding:13px;border:none;border-radius:12px;background:#1e3a8a;color:#fff;font-size:15px;font-weight:900;cursor:pointer;}
 .wd-sc{font-size:40px;font-weight:900;color:#1e3a8a;margin:6px 0;}
 .wd-rmsg{font-weight:700;font-size:15px;}
@@ -394,6 +404,9 @@ body{font-family:'Noto Sans JP',-apple-system,sans-serif;background:#f0f2f8;min-
       </div>
     </div>
     <button class="wd-go" onclick="wdStart()">🚀 开始背题</button>
+    <button class="wd-resetm" id="wd-mtoggle" onclick="wdToggleMlist()">查看已掌握单词列表（<span id="wd-mcount">0</span> 个）</button>
+    <div id="wd-mlist" class="wd-mlist" style="display:none"></div>
+    <button class="wd-resetm" onclick="wdResetMastered()" style="margin-top:10px">一键清空全部已掌握</button>
   </div>
   <div id="wd-main" style="display:none">
     <div class="wd-pbar"><div class="wd-pfill" id="wd-pfill"></div></div>
@@ -404,6 +417,7 @@ body{font-family:'Noto Sans JP',-apple-system,sans-serif;background:#f0f2f8;min-
       <div class="wd-target" id="wd-target"></div>
       <div class="wd-grid" id="wd-opts2"></div>
       <div class="wd-fb" id="wd-fb"></div>
+      <button class="wd-master" id="wd-master" onclick="wdMaster()">✓ 这个词我已掌握，以后不再出现</button>
     </div>
     <button class="wd-next" id="wd-next" onclick="wdNext()">下一题 →</button>
   </div>
@@ -536,79 +550,79 @@ const VERBS=[
 // ══════════════════════════════════════════════
 const ADJS=[
   // イ形容词
-  ["あかい","あかい","红色的","イ形","",""],
-  ["あおい","あおい","蓝/绿色的","イ形","",""],
-  ["しろい","しろい","白色的","イ形","くろい","くろい"],
-  ["くろい","くろい","黑色的","イ形","しろい","しろい"],
-  ["あたらしい","あたらしい","新的","イ形","ふるい","ふるい"],
-  ["ふるい","ふるい","旧的、老的","イ形","あたらしい","あたらしい"],
-  ["おおきい","おおきい","大的","イ形","ちいさい","ちいさい"],
-  ["ちいさい","ちいさい","小的","イ形","おおきい","おおきい"],
-  ["たかい","たかい","高的、贵的","イ形","ひくい/やすい","ひくい/やすい"],
-  ["ひくい","ひくい","低的","イ形","たかい","たかい"],
-  ["やすい","やすい","便宜的","イ形","たかい","たかい"],
-  ["たのしい","たのしい","快乐的","イ形","つまらない","つまらない"],
-  ["つまらない","つまらない","无聊的","イ形","たのしい","たのしい"],
-  ["おもしろい","おもしろい","有趣的","イ形","つまらない","つまらない"],
-  ["おいしい","おいしい","好吃的","イ形","まずい","まずい"],
-  ["まずい","まずい","难吃的","イ形","おいしい","おいしい"],
-  ["あつい","あつい","热的","イ形","さむい/つめたい","さむい/つめたい"],
-  ["さむい","さむい","冷的（天气）","イ形","あつい","あつい"],
-  ["つめたい","つめたい","冰凉的（触感）","イ形","あつい","あつい"],
-  ["あたたかい","あたたかい","温暖的","イ形","すずしい","すずしい"],
-  ["すずしい","すずしい","凉爽的","イ形","あたたかい","あたたかい"],
-  ["むずかしい","むずかしい","难的","イ形","やさしい","やさしい"],
-  ["やさしい","やさしい","简单的、温柔的","イ形","むずかしい","むずかしい"],
-  ["いい／よい","いい/よい","好的","イ形","わるい","わるい"],
-  ["わるい","わるい","坏的","イ形","いい","いい"],
-  ["はやい","はやい","快的、早的","イ形","おそい","おそい"],
-  ["おそい","おそい","慢的、晚的","イ形","はやい","はやい"],
-  ["ながい","ながい","长的","イ形","みじかい","みじかい"],
-  ["みじかい","みじかい","短的","イ形","ながい","ながい"],
-  ["おおい","おおい","多的","イ形","すくない","すくない"],
-  ["すくない","すくない","少的","イ形","おおい","おおい"],
-  ["とおい","とおい","远的","イ形","ちかい","ちかい"],
-  ["ちかい","ちかい","近的","イ形","とおい","とおい"],
-  ["ひろい","ひろい","宽广的","イ形","せまい","せまい"],
-  ["せまい","せまい","狭窄的","イ形","ひろい","ひろい"],
-  ["おもい","おもい","重的","イ形","かるい","かるい"],
-  ["かるい","かるい","轻的","イ形","おもい","おもい"],
-  ["あぶない","あぶない","危险的","イ形","",""],
-  ["うれしい","うれしい","高兴的","イ形","かなしい","かなしい"],
-  ["かなしい","かなしい","悲伤的","イ形","うれしい","うれしい"],
-  ["いそがしい","いそがしい","忙的","イ形","ひまな","ひまな"],
-  ["つよい","つよい","强的","イ形","よわい","よわい"],
-  ["よわい","よわい","弱的","イ形","つよい","つよい"],
-  ["あかるい","あかるい","明亮的","イ形","くらい","くらい"],
-  ["くらい","くらい","暗的","イ形","あかるい","あかるい"],
-  ["からい","からい","辣的","イ形","あまい","あまい"],
-  ["あまい","あまい","甜的","イ形","からい","からい"],
-  ["かわいい","かわいい","可爱的","イ形","",""],
-  ["きたない","きたない","脏的","イ形","きれいな","きれいな"],
-  ["さびしい","さびしい","寂寞的","イ形","",""],
-  ["やわらかい","やわらかい","软的","イ形","かたい","かたい"],
-  ["かたい","かたい","硬的","イ形","やわらかい","やわらかい"],
+  ["赤い","あかい","红色的","イ形","",""],
+  ["青い","あおい","蓝/绿色的","イ形","",""],
+  ["白い","しろい","白色的","イ形","黒い","くろい"],
+  ["黒い","くろい","黑色的","イ形","白い","しろい"],
+  ["新しい","あたらしい","新的","イ形","古い","ふるい"],
+  ["古い","ふるい","旧的、老的","イ形","新しい","あたらしい"],
+  ["大きい","おおきい","大的","イ形","小さい","ちいさい"],
+  ["小さい","ちいさい","小的","イ形","大きい","おおきい"],
+  ["高い","たかい","高的、贵的","イ形","低い/安い","ひくい/やすい"],
+  ["低い","ひくい","低的","イ形","高い","たかい"],
+  ["安い","やすい","便宜的","イ形","高い","たかい"],
+  ["楽しい","たのしい","快乐的","イ形","つまらない","つまらない"],
+  ["つまらない","つまらない","无聊的","イ形","楽しい","たのしい"],
+  ["面白い","おもしろい","有趣的","イ形","つまらない","つまらない"],
+  ["美味しい","おいしい","好吃的","イ形","まずい","まずい"],
+  ["まずい","まずい","难吃的","イ形","美味しい","おいしい"],
+  ["暑い","あつい","热的","イ形","寒い/冷たい","さむい/つめたい"],
+  ["寒い","さむい","冷的（天气）","イ形","暑い","あつい"],
+  ["冷たい","つめたい","冰凉的（触感）","イ形","暑い","あつい"],
+  ["暖かい","あたたかい","温暖的","イ形","涼しい","すずしい"],
+  ["涼しい","すずしい","凉爽的","イ形","暖かい","あたたかい"],
+  ["難しい","むずかしい","难的","イ形","優しい","やさしい"],
+  ["優しい","やさしい","简单的、温柔的","イ形","難しい","むずかしい"],
+  ["いい／よい","いい/よい","好的","イ形","悪い","わるい"],
+  ["悪い","わるい","坏的","イ形","いい","いい"],
+  ["速い","はやい","快的、早的","イ形","遅い","おそい"],
+  ["遅い","おそい","慢的、晚的","イ形","速い","はやい"],
+  ["長い","ながい","长的","イ形","短い","みじかい"],
+  ["短い","みじかい","短的","イ形","長い","ながい"],
+  ["多い","おおい","多的","イ形","少ない","すくない"],
+  ["少ない","すくない","少的","イ形","多い","おおい"],
+  ["遠い","とおい","远的","イ形","近い","ちかい"],
+  ["近い","ちかい","近的","イ形","遠い","とおい"],
+  ["広い","ひろい","宽广的","イ形","狭い","せまい"],
+  ["狭い","せまい","狭窄的","イ形","広い","ひろい"],
+  ["重い","おもい","重的","イ形","軽い","かるい"],
+  ["軽い","かるい","轻的","イ形","重い","おもい"],
+  ["危ない","あぶない","危险的","イ形","",""],
+  ["嬉しい","うれしい","高兴的","イ形","悲しい","かなしい"],
+  ["悲しい","かなしい","悲伤的","イ形","嬉しい","うれしい"],
+  ["忙しい","いそがしい","忙的","イ形","暇な","ひまな"],
+  ["強い","つよい","强的","イ形","弱い","よわい"],
+  ["弱い","よわい","弱的","イ形","強い","つよい"],
+  ["明るい","あかるい","明亮的","イ形","暗い","くらい"],
+  ["暗い","くらい","暗的","イ形","明るい","あかるい"],
+  ["辛い","からい","辣的","イ形","甘い","あまい"],
+  ["甘い","あまい","甜的","イ形","辛い","からい"],
+  ["可愛い","かわいい","可爱的","イ形","",""],
+  ["汚い","きたない","脏的","イ形","きれいな","きれいな"],
+  ["寂しい","さびしい","寂寞的","イ形","",""],
+  ["柔らかい","やわらかい","软的","イ形","硬い","かたい"],
+  ["硬い","かたい","硬的","イ形","柔らかい","やわらかい"],
   // ナ形容词
-  ["きれいな","きれいな","漂亮的、干净的","ナ形","きたない","きたない"],
-  ["すきな","すきな","喜欢的","ナ形","きらいな","きらいな"],
-  ["きらいな","きらいな","讨厌的","ナ形","すきな","すきな"],
-  ["じょうずな","じょうずな","擅长的","ナ形","へたな","へたな"],
-  ["へたな","へたな","不擅长的","ナ形","じょうずな","じょうずな"],
-  ["しずかな","しずかな","安静的","ナ形","にぎやかな","にぎやかな"],
-  ["にぎやかな","にぎやかな","热闹的","ナ形","しずかな","しずかな"],
-  ["げんきな","げんきな","有精神的","ナ形","",""],
-  ["ひまな","ひまな","空闲的","ナ形","いそがしい","いそがしい"],
-  ["べんりな","べんりな","方便的","ナ形","ふべんな","ふべんな"],
-  ["ふべんな","ふべんな","不方便的","ナ形","べんりな","べんりな"],
-  ["たいせつな","たいせつな","重要的、珍贵的","ナ形","",""],
+  ["きれいな","きれいな","漂亮的、干净的","ナ形","汚い","きたない"],
+  ["好きな","すきな","喜欢的","ナ形","嫌いな","きらいな"],
+  ["嫌いな","きらいな","讨厌的","ナ形","好きな","すきな"],
+  ["上手な","じょうずな","擅长的","ナ形","下手な","へたな"],
+  ["下手な","へたな","不擅长的","ナ形","上手な","じょうずな"],
+  ["静かな","しずかな","安静的","ナ形","賑やかな","にぎやかな"],
+  ["賑やかな","にぎやかな","热闹的","ナ形","静かな","しずかな"],
+  ["元気な","げんきな","有精神的","ナ形","",""],
+  ["暇な","ひまな","空闲的","ナ形","忙しい","いそがしい"],
+  ["便利な","べんりな","方便的","ナ形","不便な","ふべんな"],
+  ["不便な","ふべんな","不方便的","ナ形","便利な","べんりな"],
+  ["大切な","たいせつな","重要的、珍贵的","ナ形","",""],
   ["いろいろな","いろいろな","各种各样的","ナ形","",""],
   ["すてきな","すてきな","漂亮的、棒的","ナ形","",""],
-  ["だいじょうぶな","だいじょうぶな","没问题的","ナ形","",""],
-  ["とくべつな","とくべつな","特别的","ナ形","",""],
-  ["ゆうめいな","ゆうめいな","有名的","ナ形","",""],
-  ["かんたんな","かんたんな","简单的","ナ形","むずかしい","むずかしい"],
-  ["しんせつな","しんせつな","亲切的","ナ形","",""],
-  ["まじめな","まじめな","认真的","ナ形","",""],
+  ["大丈夫な","だいじょうぶな","没问题的","ナ形","",""],
+  ["特別な","とくべつな","特别的","ナ形","",""],
+  ["有名な","ゆうめいな","有名的","ナ形","",""],
+  ["簡単な","かんたんな","简单的","ナ形","難しい","むずかしい"],
+  ["親切な","しんせつな","亲切的","ナ形","",""],
+  ["真面目な","まじめな","认真的","ナ形","",""],
 ];
 
 // ══════════════════════════════════════════════
@@ -675,6 +689,11 @@ function switchMain(tab){
   });
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+tab).classList.add('active');
+  if(tab==='word')updateWdMcount();
+}
+function updateWdMcount(){
+  const el=document.getElementById('wd-mcount');
+  if(el)el.textContent=wdMasterCount();
 }
 
 // ══════════════════════════════════════════════
@@ -1097,11 +1116,57 @@ function wdPick(g,v,el){
   el.classList.add('on');
   if(g==='scope')wdScope=v;else wdType=v;
 }
+const WDMKEY='n5_wd_mastered';
+let wdMastered={};try{wdMastered=JSON.parse(localStorage.getItem(WDMKEY)||'{}');}catch(e){wdMastered={};}
+function wdKey(w){return w.k+'|'+w.disp+'|'+w.read;}
+function wdSaveMastered(){try{localStorage.setItem(WDMKEY,JSON.stringify(wdMastered));}catch(e){}}
 function wdPool(scope){
   let a=[];
   if(scope!=='adj')VERBS.forEach(v=>a.push({disp:v[1],read:v[2],mean:v[3],k:'动词'}));
   if(scope!=='verb')ADJS.forEach(x=>a.push({disp:x[0],read:x[1],mean:x[2],k:'形容词'}));
-  return a;
+  return a.filter(w=>!wdMastered[wdKey(w)]);
+}
+function wdMasterCount(){return Object.keys(wdMastered).length;}
+function wdMaster(){
+  const q=wdList[wdIdx];if(!q)return;
+  const key=wdKey(q.w);
+  wdMastered[key]={disp:q.w.disp,read:q.w.read,mean:q.w.mean,k:q.w.k};
+  wdList=wdList.filter((x,i)=>i<=wdIdx||wdKey(x.w)!==key);
+  wdSaveMastered();
+  wdNext();
+}
+function wdUnmaster(key){
+  delete wdMastered[key];
+  wdSaveMastered();
+  updateWdMcount();
+  wdRenderMlist();
+}
+function wdRenderMlist(){
+  const box=document.getElementById('wd-mlist');
+  if(!box)return;
+  const keys=Object.keys(wdMastered);
+  if(!keys.length){box.innerHTML='<div style="text-align:center;color:#aaa;font-size:12px;padding:14px 0">还没有标记任何已掌握的单词</div>';return;}
+  box.innerHTML=keys.map(k=>{
+    let w=wdMastered[k];
+    if(!w||typeof w!=='object'){const p=k.split('|');w={k:p[0],disp:p[1],read:p[2],mean:''};}
+    return '<div class="wd-mitem"><div class="wd-mtxt"><b>'+w.disp+'</b>　'+w.read+(w.mean?'　'+w.mean:'')+'</div><button class="wd-mcancel" onclick="wdUnmaster(\''+k.replace(/'/g,"\\'")+'\')">取消</button></div>';
+  }).join('');
+}
+function wdToggleMlist(){
+  const box=document.getElementById('wd-mlist');
+  const showing=box.style.display==='block';
+  box.style.display=showing?'none':'block';
+  document.getElementById('wd-mtoggle').textContent=showing?'查看已掌握单词列表':'收起列表';
+  if(!showing)wdRenderMlist();
+}
+function wdResetMastered(){
+  const n=wdMasterCount();
+  if(!n){alert('还没有标记任何已掌握的单词。');return;}
+  if(confirm('确定清空全部 '+n+' 个已掌握标记？清空后这些词会重新出现在练习里。')){
+    wdMastered={};wdSaveMastered();
+    alert('已清空，所有单词恢复练习。');
+    updateWdMcount();wdRenderMlist();
+  }
 }
 function wdField(t){return t==='t1'?'read':'disp';}
 function wdPrompt(w,t){return t==='t1'?w.disp:t==='t3'?w.read:w.mean;}
@@ -1126,7 +1191,7 @@ function wdStart(){
     let targets=(wdType==='t1'||wdType==='t3')?pool.filter(w=>w.disp!==w.read):pool;
     shuffle(targets).forEach(w=>{const q=makeOne(w,wdType);if(q)qs.push(q);});
   }
-  qs=qs.slice(0,20);
+  qs=qs.slice(0,50);
   if(!qs.length){alert('该范围+题型没有合适的题目。\n形容词多为纯假名，建议用「看中文→选日语」。');return;}
   wdList=qs;wdIdx=0;wdOk=0;wdWrong=[];
   document.getElementById('wd-setup').style.display='none';
@@ -1184,6 +1249,7 @@ function wdBack(){
   document.getElementById('wd-result').style.display='none';
   document.getElementById('wd-main').style.display='none';
   document.getElementById('wd-setup').style.display='block';
+  updateWdMcount();
 }
 
 /* ════ 考点清单 ════ */
