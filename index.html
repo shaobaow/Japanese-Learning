@@ -261,7 +261,87 @@ body{font-family:'Noto Sans JP',-apple-system,sans-serif;background:#f0f2f8;min-
 .js-acts{display:flex;gap:10px;margin-top:18px;}
 .js-acts button{flex:1;padding:13px;border:none;border-radius:12px;font-size:14px;font-weight:900;cursor:pointer;}
 .js-retry{background:#f59e0b;color:#fff;}
-.js-back{background:#eef2fb;color:#333;}
+.js-back{background:#eef2fb;color:#333;}.mbtn{padding:5px 10px;border:1.5px solid #d8dce8;border-radius:7px;background:#f7f9ff;color:#555;font-size:11.5px;font-weight:700;cursor:pointer;white-space:nowrap;}
+.mbtn.on{background:#e9f9ee;border-color:#10b981;color:#0a8a44;}
+.jrow.mastered{background:#f8fcf9;}
+.jrow.mastered .jword,.jrow.mastered .jmean,.jrow.mastered .jread{opacity:.55;}
+.vm-listbtn{display:block;width:100%;margin-top:10px;padding:11px;border:1.5px dashed #3b82f6;border-radius:10px;background:#f5f8ff;color:#1e3a8a;font-size:13px;font-weight:700;cursor:pointer;}
+.vm-listbtn:active{background:#eaf0fe;}
+.vm-list{max-height:280px;overflow-y:auto;margin-top:8px;background:#fff;border:1px solid #eef0f6;border-radius:12px;padding:6px 10px;}
+.vm-item{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 4px;border-bottom:1px solid #f3f4f9;font-size:12.5px;}
+.vm-item:last-child{border-bottom:none;}
+.vm-txt{flex:1;min-width:0;color:#333;}
+.vm-txt b{color:#1e3a8a;font-size:14px;}
+.vm-cancel{flex-shrink:0;padding:5px 11px;border:1.5px solid #ef4444;border-radius:8px;background:#fdeceb;color:#d3503e;font-size:11.5px;font-weight:700;cursor:pointer;}
+.vm-cancel:active{background:#fbdada;}
+.vm-empty{text-align:center;color:#aaa;font-size:12px;padding:16px 0;}
+
+/* ==== 数字·日期模块 ==== */
+.dt-intro{background:#fff;border-radius:14px;padding:18px 16px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:14px;}
+.dt-intro h2{font-size:17px;color:#1e3a8a;margin-bottom:6px;}
+.dt-intro p{font-size:12.5px;color:#888;line-height:1.6;}
+.dt-seg{display:flex;gap:8px;margin-bottom:14px;}
+.dt-segbtn{flex:1;padding:11px;border:none;border-radius:11px;background:#eef2fb;color:#667;font-size:13.5px;font-weight:700;cursor:pointer;}
+.dt-segbtn.on{background:#1e3a8a;color:#fff;}
+.dt-card{background:#fff;border-radius:14px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:12px;}
+.dt-h{font-size:15px;font-weight:900;color:#1e3a8a;margin-bottom:8px;}
+.dt-note{font-size:12px;color:#777;background:#f7f9ff;border-left:3px solid #3b82f6;padding:8px 10px;border-radius:8px;margin-bottom:10px;line-height:1.6;}
+.dt-table{width:100%;border-collapse:collapse;font-size:13px;}
+.dt-table th{background:#f5f7fb;color:#666;font-size:11.5px;font-weight:700;padding:7px 6px;text-align:center;border-bottom:2px solid #e5e9f2;}
+.dt-table td{padding:8px 6px;text-align:center;border-bottom:1px solid #f0f2f8;color:#333;}
+.dt-table td.dt-rl{text-align:left;font-weight:700;color:#1e3a8a;background:#f9fafd;}
+.dt-table td.dt-sp{background:#fdeceb;color:#c0392b;font-weight:900;}
+.dt-core th{background:#eef1fb;}
+.dt-kpwrap{position:relative;}
+.dt-kp{position:absolute;top:-6px;right:-4px;background:#ef4444;color:#fff;font-size:8.5px;font-weight:900;padding:1px 4px;border-radius:5px;line-height:1.4;box-shadow:0 1px 3px rgba(0,0,0,.25);}
+.dt-table td{position:relative;}
+.dt-toc{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
+.dt-toclink{padding:7px 12px;border-radius:9px;background:#eef2fb;color:#1e3a8a;font-size:12px;font-weight:700;text-decoration:none;cursor:pointer;border:none;}
+.dt-toclink:active{background:#dde5fa;}
+.dt-sec-h{font-size:13px;font-weight:900;color:#fff;background:#1e3a8a;display:inline-block;padding:4px 12px;border-radius:8px;margin:18px 0 10px;}
+.dt-tip{font-size:12px;color:#555;margin-top:10px;padding:9px 10px;background:#fffbea;border-radius:8px;border-left:3px solid #f59e0b;line-height:1.7;}
+.dt-tip b{color:#b56a17;}
+.dt-daygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;}
+.dt-dcell{background:#f7f9ff;border-radius:9px;padding:8px 6px;text-align:center;}
+.dt-dcell.trap{background:#fff0da;}
+.dt-dnum{font-size:11px;color:#999;font-weight:700;}
+.dt-dread{font-size:13px;font-weight:900;color:#333;margin-top:2px;}
+.dt-dcell.trap .dt-dread{color:#b56a17;}
+
+/* 翻卡自测 */
+.dt-view{}
+.dt-setup{background:#fff;border-radius:14px;padding:18px 16px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.dt-setup h2{font-size:17px;color:#1e3a8a;margin-bottom:4px;}
+.dt-setup p{font-size:12px;color:#888;margin-bottom:14px;}
+.dt-lbl{font-size:12px;color:#666;font-weight:700;margin-bottom:8px;}
+.dt-opts{display:flex;flex-wrap:wrap;gap:8px;}
+.dt-chip{padding:9px 14px;border-radius:10px;border:2px solid #e0e4f0;background:#f7f9ff;font-size:13px;font-weight:700;color:#333;cursor:pointer;}
+.dt-chip.on{background:#1e3a8a;border-color:#1e3a8a;color:#fff;}
+.dt-go{display:block;width:100%;margin-top:18px;padding:13px;border:none;border-radius:12px;background:#f59e0b;color:#fff;font-size:15px;font-weight:900;cursor:pointer;}
+.dt-meta{display:flex;justify-content:space-between;font-size:12px;color:#888;font-weight:700;margin-bottom:8px;}
+.dt-pbar{height:6px;background:#e8ecf8;border-radius:4px;overflow:hidden;margin-bottom:16px;}
+.dt-pfill{height:100%;background:#3b82f6;width:0;transition:width .3s;}
+.dt-flip{background:#fff;border-radius:16px;box-shadow:0 2px 10px rgba(0,0,0,.1);min-height:180px;display:flex;align-items:center;justify-content:center;padding:24px 18px;cursor:pointer;text-align:center;}
+.dt-face{font-weight:900;line-height:1.6;}
+.dt-front{font-size:20px;color:#222;}
+.dt-back{font-size:24px;color:#1e3a8a;}
+.dt-back .sub{font-size:13px;color:#888;font-weight:500;margin-top:8px;}
+.dt-hint{text-align:center;font-size:12px;color:#aaa;margin-top:10px;}
+.dt-judge{display:flex;gap:10px;margin-top:16px;}
+.dt-jbtn{flex:1;padding:14px;border:none;border-radius:12px;font-size:14px;font-weight:900;cursor:pointer;}
+.dt-jno{background:#fdeceb;color:#d3503e;}
+.dt-jok{background:#e9f9ee;color:#0a8a44;}
+.dt-result{background:#fff;border-radius:14px;padding:26px 18px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.dt-sc{font-size:40px;font-weight:900;color:#1e3a8a;margin:6px 0;}
+.dt-rmsg{font-weight:700;font-size:15px;color:#333;}
+.dt-rwrong{text-align:left;margin-top:18px;}
+.dt-rwrong h3{font-size:13px;color:#ef4444;margin-bottom:8px;}
+.dt-witem{background:#fdeceb;border-radius:10px;padding:10px 12px;margin-bottom:7px;font-size:12.5px;color:#555;}
+.dt-witem b{color:#1e3a8a;}
+.dt-acts{display:flex;gap:10px;margin-top:18px;}
+.dt-acts button{flex:1;padding:13px;border:none;border-radius:12px;font-size:14px;font-weight:900;cursor:pointer;}
+.dt-retry{background:#f59e0b;color:#fff;}
+.dt-back2{background:#eef2fb;color:#333;}
 </style>
 </head>
 <body>
@@ -276,6 +356,7 @@ body{font-family:'Noto Sans JP',-apple-system,sans-serif;background:#f0f2f8;min-
     <button class="main-tab" onclick="switchMain('quiz')">🔄 变形</button>
     <button class="main-tab" onclick="switchMain('point')">📋 考点</button>
     <button class="main-tab" onclick="switchMain('joshi')">✍️ 助词</button>
+    <button class="main-tab" onclick="switchMain('date')">📅 数字·日期</button>
   </div>
 </div>
 
@@ -291,10 +372,12 @@ body{font-family:'Noto Sans JP',-apple-system,sans-serif;background:#f0f2f8;min-
   <div class="count-bar" id="vcount"></div>
   <table class="jtable">
     <thead><tr>
-      <th style="width:24px">#</th><th>ます形</th><th>原型·注音</th><th>意思</th><th>类别</th>
+      <th style="width:24px">#</th><th>ます形</th><th>原型·注音</th><th>意思</th><th>类别</th><th style="width:54px">掌握</th>
     </tr></thead>
     <tbody id="vtbody"></tbody>
   </table>
+  <button class="vm-listbtn" onclick="vToggleMlist()" id="vm-toggle">📋 查看已掌握动词（<span id="vm-count">0</span>）</button>
+  <div id="vm-list" class="vm-list" style="display:none"></div>
 </div>
 
 <!-- ══ 形容词页 ══ -->
@@ -308,10 +391,12 @@ body{font-family:'Noto Sans JP',-apple-system,sans-serif;background:#f0f2f8;min-
   <div class="count-bar" id="acount"></div>
   <table class="jtable">
     <thead><tr>
-      <th style="width:24px">#</th><th>形容词</th><th>注音</th><th>意思</th><th>反义词</th><th>类型</th>
+      <th style="width:24px">#</th><th>形容词</th><th>注音</th><th>意思</th><th>反义词</th><th>类型</th><th style="width:54px">掌握</th>
     </tr></thead>
     <tbody id="atbody"></tbody>
   </table>
+  <button class="vm-listbtn" onclick="aToggleMlist()" id="am-toggle">📋 查看已掌握形容词（<span id="am-count">0</span>）</button>
+  <div id="am-list" class="vm-list" style="display:none"></div>
 </div>
 
 <!-- ══ 练习页 ══ -->
@@ -475,8 +560,572 @@ body{font-family:'Noto Sans JP',-apple-system,sans-serif;background:#f0f2f8;min-
     <div class="js-acts"><button class="js-retry" onclick="jsStart()">再练一次</button><button class="js-back" onclick="jsBack()">换范围</button></div>
   </div>
 </div>
+<!-- ══ 数字·日期页 ══ -->
+<div class="page" id="page-date">
+  <div class="dt-intro">
+    <h2>📅 数字·日期特训</h2>
+    <p>N5 最爱设的陷阱：4/7/9 到底读 よん还是し？日期 14/20/24 怎么读？两张表 + 翻卡自测，考前集中扫一遍。</p>
+  </div>
+
+  <div class="dt-seg">
+    <button class="dt-segbtn on" data-v="ref" onclick="dtSwitch('ref',this)">📖 对照表</button>
+    <button class="dt-segbtn" data-v="quiz" onclick="dtSwitch('quiz',this)">🎯 翻卡自测</button>
+  </div>
+
+  <!-- 对照表视图 -->
+  <div id="dt-ref" class="dt-view">
+    <div class="dt-card">
+      <div class="dt-h">🔑 核心表：月·时·分·日 横向对照</div>
+      <div class="dt-note">横向看，「月」整行都是特殊音读——这是出题率最高的一行。</div>
+      <table class="dt-table dt-core">
+        <thead><tr><th></th><th>4</th><th>7</th><th>9</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-rl">〜月</td><td class="dt-sp">しがつ</td><td class="dt-sp">しちがつ</td><td class="dt-sp">くがつ</td></tr>
+          <tr><td class="dt-rl">〜時</td><td class="dt-sp">よじ</td><td class="dt-sp">しちじ</td><td class="dt-sp">くじ</td></tr>
+          <tr><td class="dt-rl">〜分</td><td>よんぷん</td><td>ななふん</td><td>きゅうふん</td></tr>
+          <tr><td class="dt-rl">〜日</td><td class="dt-sp">よっか</td><td class="dt-sp">なのか</td><td>ここのか</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">🔴 深色格 = 特殊读法，必须死记；其余格子按规则读法即可。</div>
+    </div>
+
+    <div class="dt-toc">
+      <button class="dt-toclink" onclick="dtJump('dt-sec-num')">🔢 数字</button>
+      <button class="dt-toclink" onclick="dtJump('dt-sec-hour')">🕐 时刻</button>
+      <button class="dt-toclink" onclick="dtJump('dt-sec-min')">⏱ 分钟</button>
+      <button class="dt-toclink" onclick="dtJump('dt-sec-week')">📅 星期</button>
+      <button class="dt-toclink" onclick="dtJump('dt-sec-month')">🗓 月份</button>
+      <button class="dt-toclink" onclick="dtJump('dt-sec-day')">📆 日期</button>
+      <button class="dt-toclink" onclick="dtJump('dt-sec-counter')">🔠 助数词</button>
+    </div>
+
+    <div class="dt-sec-h" id="dt-sec-num">🔢 数字基础读法 0-100+</div>
+    <div class="dt-card">
+      <table class="dt-table">
+        <thead><tr><th>数字</th><th>读法</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td>ゼロ／れい</td><td>两种都常用</td></tr>
+          <tr><td>1〜10</td><td>いち・に・さん・よん・ご・ろく・なな・はち・きゅう・じゅう</td><td>基础中的基础，4用よん、7用なな、9用きゅう（单读时）</td></tr>
+          <tr><td class="dt-kpwrap">11〜19<span class="dt-kp">考点</span></td><td>じゅう＋个位数（如14＝じゅうよん）</td><td>规则拼读，不用死记</td></tr>
+          <tr><td>20/30…90</td><td>にじゅう・さんじゅう…きゅうじゅう</td><td>十位数＋じゅう，规则</td></tr>
+          <tr><td class="dt-kpwrap">100<span class="dt-kp">考点</span></td><td>ひゃく</td><td>基准音</td></tr>
+          <tr><td class="dt-kpwrap">300<span class="dt-kp">考点</span></td><td class="dt-sp">さんびゃく</td><td>浊音变化，不是さんひゃく</td></tr>
+          <tr><td class="dt-kpwrap">600<span class="dt-kp">考点</span></td><td class="dt-sp">ろっぴゃく</td><td>促音＋半浊音</td></tr>
+          <tr><td class="dt-kpwrap">800<span class="dt-kp">考点</span></td><td class="dt-sp">はっぴゃく</td><td>促音＋半浊音</td></tr>
+          <tr><td>1000</td><td>せん</td><td>基准音</td></tr>
+          <tr><td class="dt-kpwrap">3000<span class="dt-kp">考点</span></td><td class="dt-sp">さんぜん</td><td>浊音变化，不是さんせん</td></tr>
+          <tr><td class="dt-kpwrap">8000<span class="dt-kp">考点</span></td><td class="dt-sp">はっせん</td><td>促音变化</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">记法：百/千在 <b>3・6・8</b> 位置容易发生浊音或促音变化，是数字听力题的常见坑；100以内规则读法居多，不用死记。</div>
+    </div>
+
+    <div class="dt-sec-h" id="dt-sec-hour">🕐 时刻 〜時</div>
+    <div class="dt-card">
+      <table class="dt-table">
+        <thead><tr><th>时刻</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td>1時</td><td>いちじ</td></tr>
+          <tr><td>2時</td><td>にじ</td></tr>
+          <tr><td>3時</td><td>さんじ</td></tr>
+          <tr><td class="dt-kpwrap">4時<span class="dt-kp">考点</span></td><td class="dt-sp">よじ</td></tr>
+          <tr><td>5時</td><td>ごじ</td></tr>
+          <tr><td>6時</td><td>ろくじ</td></tr>
+          <tr><td class="dt-kpwrap">7時<span class="dt-kp">考点</span></td><td class="dt-sp">しちじ</td></tr>
+          <tr><td>8時</td><td>はちじ</td></tr>
+          <tr><td class="dt-kpwrap">9時<span class="dt-kp">考点</span></td><td class="dt-sp">くじ</td></tr>
+          <tr><td>10時</td><td>じゅうじ</td></tr>
+          <tr><td>11時</td><td>じゅういちじ</td></tr>
+          <tr><td>12時</td><td>じゅうにじ</td></tr>
+          <tr><td>何時</td><td>なんじ（疑问：几点）</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">时刻的坑和月份几乎完全一致：<b>4時よじ・7時しちじ・9時くじ</b>，记住这三个，其余全规则。</div>
+    </div>
+
+    <div class="dt-sec-h" id="dt-sec-min">⏱ 分钟 〜分</div>
+    <div class="dt-card">
+      <div class="dt-note">分钟是 N5 数字题<b>坑最密集</b>的一项：1・3・4・6・8・10 全部发生读音变化，务必整体背下来。</div>
+      <table class="dt-table">
+        <thead><tr><th>分钟</th><th>读法</th><th>变化类型</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-kpwrap">1分<span class="dt-kp">考点</span></td><td class="dt-sp">いっぷん</td><td>促音＋半浊音</td></tr>
+          <tr><td>2分</td><td>にふん</td><td>规则</td></tr>
+          <tr><td class="dt-kpwrap">3分<span class="dt-kp">考点</span></td><td class="dt-sp">さんぷん</td><td>半浊音（无促音）</td></tr>
+          <tr><td class="dt-kpwrap">4分<span class="dt-kp">考点</span></td><td class="dt-sp">よんぷん</td><td>半浊音</td></tr>
+          <tr><td>5分</td><td>ごふん</td><td>规则</td></tr>
+          <tr><td class="dt-kpwrap">6分<span class="dt-kp">考点</span></td><td class="dt-sp">ろっぷん</td><td>促音＋半浊音</td></tr>
+          <tr><td>7分</td><td>ななふん</td><td>规则</td></tr>
+          <tr><td class="dt-kpwrap">8分<span class="dt-kp">考点</span></td><td class="dt-sp">はっぷん</td><td>促音＋半浊音</td></tr>
+          <tr><td>9分</td><td>きゅうふん</td><td>规则</td></tr>
+          <tr><td class="dt-kpwrap">10分<span class="dt-kp">考点</span></td><td class="dt-sp">じゅっぷん（じっぷん）</td><td>促音＋半浊音，两种读法都对</td></tr>
+          <tr><td>何分</td><td>なんぷん（疑问：几分）</td><td></td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">口诀：<b>1・6・8・10 用「っ＋ぷん」（促音＋半浊音）；3・4 只变半浊音不加促音（さんぷん・よんぷん）</b>；2・5・7・9 完全规则用「ふん」。</div>
+    </div>
+
+    <div class="dt-sec-h" id="dt-sec-week">📅 星期 〜曜日</div>
+    <div class="dt-card">
+      <table class="dt-table">
+        <thead><tr><th>星期</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td>星期一</td><td>月曜日　げつようび</td></tr>
+          <tr><td>星期二</td><td>火曜日　かようび</td></tr>
+          <tr><td>星期三</td><td>水曜日　すいようび</td></tr>
+          <tr><td>星期四</td><td>木曜日　もくようび</td></tr>
+          <tr><td>星期五</td><td>金曜日　きんようび</td></tr>
+          <tr><td>星期六</td><td>土曜日　どようび</td></tr>
+          <tr><td>星期日</td><td>日曜日　にちようび</td></tr>
+          <tr><td>疑问</td><td>何曜日　なんようび（星期几）</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">星期全部规则，没有音变坑，只要背熟「月火水木金土日」对应的汉字和读音顺序即可。</div>
+    </div>
+
+    <div class="dt-sec-h" id="dt-sec-month">🗓 月份 〜月</div>
+    <div class="dt-card">
+      <table class="dt-table">
+        <thead><tr><th>月份</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td>1月</td><td>いちがつ</td></tr>
+          <tr><td>2月</td><td>にがつ</td></tr>
+          <tr><td>3月</td><td>さんがつ</td></tr>
+          <tr><td class="dt-kpwrap">4月<span class="dt-kp">考点</span></td><td class="dt-sp">しがつ</td></tr>
+          <tr><td>5月</td><td>ごがつ</td></tr>
+          <tr><td>6月</td><td>ろくがつ</td></tr>
+          <tr><td class="dt-kpwrap">7月<span class="dt-kp">考点</span></td><td class="dt-sp">しちがつ</td></tr>
+          <tr><td>8月</td><td>はちがつ</td></tr>
+          <tr><td class="dt-kpwrap">9月<span class="dt-kp">考点</span></td><td class="dt-sp">くがつ</td></tr>
+          <tr><td>10月</td><td>じゅうがつ</td></tr>
+          <tr><td>11月</td><td>じゅういちがつ</td></tr>
+          <tr><td>12月</td><td>じゅうにがつ</td></tr>
+          <tr><td>疑问</td><td>何月　なんがつ（几月）</td></tr>
+          <tr><td class="dt-kpwrap">一个月<span class="dt-kp">考点</span></td><td>1か月　いっかげつ（注意「か」不能省，和「1月」不同）</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">月份的坑和时刻完全同源：<b>4月しがつ・7月しちがつ・9月くがつ</b>。另外「本月/几个月」用「〜か月」，和表日期的「〜月」是两套系统，容易混。</div>
+    </div>
+
+    <div class="dt-card">
+      <div class="dt-h">4 → よん / よ / し</div>
+      <table class="dt-table">
+        <thead><tr><th>用途</th><th>读法</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>4月</td><td class="dt-sp">しがつ</td><td>唯一用「し」的特例</td></tr>
+          <tr><td>4時</td><td class="dt-sp">よじ</td><td>短读「よ」</td></tr>
+          <tr><td>4人</td><td class="dt-sp">よにん</td><td>注意不是よんにん</td></tr>
+          <tr><td>4日</td><td class="dt-sp">よっか</td><td>よ系促音</td></tr>
+          <tr><td>4分／4本／4枚／4階／4歳</td><td>よん〜</td><td>绝大多数场合用よん</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">记法：4 <b>绝大多数用よん</b>；4月しがつ是特例，外加 4時よじ・4人よにん・4日よっか 用短的「よ」。</div>
+    </div>
+
+    <div class="dt-card">
+      <div class="dt-h">7 → しち / なな</div>
+      <table class="dt-table">
+        <thead><tr><th>用途</th><th>读法</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>7月</td><td class="dt-sp">しちがつ</td><td>固定用しち</td></tr>
+          <tr><td>7時</td><td class="dt-sp">しちじ</td><td>固定用しち</td></tr>
+          <tr><td>7日</td><td class="dt-sp">なのか</td><td>な系，特殊训读</td></tr>
+          <tr><td>7分／7本／7枚／7歳／7つ</td><td>なな〜</td><td>其余场合用なな</td></tr>
+          <tr><td>7人</td><td>しちにん／ななにん</td><td>两种都行</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">记法：<b>只有「月・时」固定用しち</b>（7月しちがつ、7時しちじ）；其他大多用なな。</div>
+    </div>
+
+    <div class="dt-card">
+      <div class="dt-h">9 → きゅう / く</div>
+      <table class="dt-table">
+        <thead><tr><th>用途</th><th>读法</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>9月</td><td class="dt-sp">くがつ</td><td>特例，必记</td></tr>
+          <tr><td>9時</td><td class="dt-sp">くじ</td><td>特例，必记</td></tr>
+          <tr><td>9時間</td><td class="dt-sp">くじかん</td><td>特例，必记</td></tr>
+          <tr><td>9分／9本／9枚／9人／9歳／9階</td><td>きゅう〜</td><td>基本都用きゅう</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">记法：9 <b>基本都用きゅう</b>；只有「9月くがつ・9時くじ・9時間くじかん」这三个用く。</div>
+    </div>
+
+    <div class="dt-card">
+      <div class="dt-h">📆 1〜31日 完整读法</div>
+      <div class="dt-note">核心规律：<b>11日以后基本是「数字音读＋にち」</b>，真正要单独背的只剩 14・20・24 这三个坑，加上 19/29 的く音。</div>
+      <div class="dt-daygrid" id="dt-daygrid"></div>
+      <div class="dt-tip">🔴 深色 = 1-10 特殊训读，全部要背　🟠 橙色 = 11日后的例外坑（14/20/24用よっか/はつか，19/29用く）</div>
+  
+    <div class="dt-sec-h" id="dt-sec-counter">🔠 助数词大全（N5 数量词）</div>
+    <div class="dt-card">
+      <div class="dt-note">助数词是数字类考题<b>覆盖面最广</b>的部分，规律和「分・本・階・匹」这类促音/半浊音变化高度相似，抓住规律比死记每一个更有效。</div>
+      <div class="dt-h">① つ（泛用量词，数东西）</div>
+      <table class="dt-table">
+        <thead><tr><th>数量</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-kpwrap">1つ<span class="dt-kp">考点</span></td><td class="dt-sp">ひとつ</td></tr>
+          <tr><td class="dt-kpwrap">2つ<span class="dt-kp">考点</span></td><td class="dt-sp">ふたつ</td></tr>
+          <tr><td>3つ</td><td>みっつ</td></tr>
+          <tr><td>4つ</td><td>よっつ</td></tr>
+          <tr><td>5つ</td><td>いつつ</td></tr>
+          <tr><td>6つ</td><td>むっつ</td></tr>
+          <tr><td>7つ</td><td>ななつ</td></tr>
+          <tr><td>8つ</td><td>やっつ</td></tr>
+          <tr><td>9つ</td><td>ここのつ</td></tr>
+          <tr><td class="dt-kpwrap">10<span class="dt-kp">考点</span></td><td class="dt-sp">とお（不加つ！）</td></tr>
+          <tr><td>疑问</td><td>いくつ（几个）</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">整套是独立的和语训读，1-10 <b>全部要单独背</b>，11以后基本不用「つ」了，改用「じゅういち」等数字直接数。<b>10 是「とお」，不带つ</b>，是最容易忘的一个。</div>
+
+      <div class="dt-h">② 人（数人数）</div>
+      <table class="dt-table">
+        <thead><tr><th>人数</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-kpwrap">1人<span class="dt-kp">考点</span></td><td class="dt-sp">ひとり</td></tr>
+          <tr><td class="dt-kpwrap">2人<span class="dt-kp">考点</span></td><td class="dt-sp">ふたり</td></tr>
+          <tr><td>3人</td><td>さんにん</td></tr>
+          <tr><td class="dt-kpwrap">4人<span class="dt-kp">考点</span></td><td class="dt-sp">よにん</td></tr>
+          <tr><td>5人〜9人</td><td>ごにん・ろくにん・しちにん／ななにん・はちにん・きゅうにん</td></tr>
+          <tr><td>10人</td><td>じゅうにん</td></tr>
+          <tr><td>疑问</td><td>何人　なんにん</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">口诀：<b>只有 1人ひとり・2人ふたり 是特殊训读</b>，3人开始全部是「数字＋にん」的规则读法（4人よにん 沿用よ系）。</div>
+
+      <div class="dt-h">③ 本（细长物：笔、瓶、伞等）</div>
+      <table class="dt-table">
+        <thead><tr><th>数量</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-kpwrap">1本<span class="dt-kp">考点</span></td><td class="dt-sp">いっぽん</td></tr>
+          <tr><td>2本</td><td>にほん</td></tr>
+          <tr><td class="dt-kpwrap">3本<span class="dt-kp">考点</span></td><td class="dt-sp">さんぼん</td></tr>
+          <tr><td>4本</td><td>よんほん</td></tr>
+          <tr><td>5本</td><td>ごほん</td></tr>
+          <tr><td class="dt-kpwrap">6本<span class="dt-kp">考点</span></td><td class="dt-sp">ろっぽん</td></tr>
+          <tr><td>7本</td><td>ななほん</td></tr>
+          <tr><td class="dt-kpwrap">8本<span class="dt-kp">考点</span></td><td class="dt-sp">はっぽん</td></tr>
+          <tr><td>9本</td><td>きゅうほん</td></tr>
+          <tr><td class="dt-kpwrap">10本<span class="dt-kp">考点</span></td><td class="dt-sp">じゅっぽん</td></tr>
+          <tr><td>疑问</td><td>何本　なんぼん</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">「本」是所有促音/半浊音变化助数词的<b>模板规律</b>：<b>1・6・8・10 → っ＋ぽん；3 → んぼん（浊音）；其余 → ほん</b>。下面的「階・匹」都遵循同一套规律。</div>
+
+      <div class="dt-h">④ 階（楼层）</div>
+      <table class="dt-table">
+        <thead><tr><th>楼层</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-kpwrap">1階<span class="dt-kp">考点</span></td><td class="dt-sp">いっかい</td></tr>
+          <tr><td>2階</td><td>にかい</td></tr>
+          <tr><td class="dt-kpwrap">3階<span class="dt-kp">考点</span></td><td class="dt-sp">さんがい</td></tr>
+          <tr><td>4階</td><td>よんかい</td></tr>
+          <tr><td>5階</td><td>ごかい</td></tr>
+          <tr><td class="dt-kpwrap">6階<span class="dt-kp">考点</span></td><td class="dt-sp">ろっかい</td></tr>
+          <tr><td>7階</td><td>ななかい</td></tr>
+          <tr><td class="dt-kpwrap">8階<span class="dt-kp">考点</span></td><td class="dt-sp">はっかい</td></tr>
+          <tr><td>9階</td><td>きゅうかい</td></tr>
+          <tr><td class="dt-kpwrap">10階<span class="dt-kp">考点</span></td><td class="dt-sp">じゅっかい</td></tr>
+          <tr><td>疑问</td><td>何階　なんがい</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">同「本」的规律：<b>1・6・8・10 促音化；3 浊音化（さんがい，不是さんかい！）</b>。这个「3階」是 N5 听力最爱挖的坑之一。</div>
+
+      <div class="dt-h">⑤ 匹（小动物：猫、狗、鱼等）</div>
+      <table class="dt-table">
+        <thead><tr><th>数量</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-kpwrap">1匹<span class="dt-kp">考点</span></td><td class="dt-sp">いっぴき</td></tr>
+          <tr><td>2匹</td><td>にひき</td></tr>
+          <tr><td class="dt-kpwrap">3匹<span class="dt-kp">考点</span></td><td class="dt-sp">さんびき</td></tr>
+          <tr><td>4匹</td><td>よんひき</td></tr>
+          <tr><td>5匹</td><td>ごひき</td></tr>
+          <tr><td class="dt-kpwrap">6匹<span class="dt-kp">考点</span></td><td class="dt-sp">ろっぴき</td></tr>
+          <tr><td>7匹</td><td>ななひき</td></tr>
+          <tr><td class="dt-kpwrap">8匹<span class="dt-kp">考点</span></td><td class="dt-sp">はっぴき</td></tr>
+          <tr><td>9匹</td><td>きゅうひき</td></tr>
+          <tr><td class="dt-kpwrap">10匹<span class="dt-kp">考点</span></td><td class="dt-sp">じゅっぴき</td></tr>
+          <tr><td>疑问</td><td>何匹　なんびき</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">和「本・階」完全同规律：<b>1・6・8・10 促音化；3 浊音化</b>。三个助数词一起记，规律记一次就够了。</div>
+
+      <div class="dt-h">⑥ 枚（薄片物：纸、票、盘子等）</div>
+      <table class="dt-table">
+        <thead><tr><th>数量</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td>1〜10枚</td><td>いちまい・にまい・さんまい・よんまい・ごまい・ろくまい・ななまい・はちまい・きゅうまい・じゅうまい</td></tr>
+          <tr><td>疑问</td><td>何枚　なんまい</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">「枚」<b>全程规则，没有促音/浊音变化</b>，是助数词里最好背的一个，直接数字＋まい即可。</div>
+
+      <div class="dt-h">⑦ 冊（书、笔记本等装订物）</div>
+      <table class="dt-table">
+        <thead><tr><th>数量</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-kpwrap">1冊<span class="dt-kp">考点</span></td><td class="dt-sp">いっさつ</td></tr>
+          <tr><td>2冊〜9冊</td><td>にさつ・さんさつ・よんさつ・ごさつ・ろくさつ・ななさつ・はっさつ・きゅうさつ</td></tr>
+          <tr><td class="dt-kpwrap">8冊<span class="dt-kp">考点</span></td><td class="dt-sp">はっさつ</td></tr>
+          <tr><td class="dt-kpwrap">10冊<span class="dt-kp">考点</span></td><td class="dt-sp">じゅっさつ</td></tr>
+          <tr><td>疑问</td><td>何冊　なんさつ</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">只有 <b>1・8・10 促音化</b>（っ＋さつ），没有浊音变化（不像本/階/匹有さ→ざ的情况），相对好记。</div>
+
+      <div class="dt-h">⑧ 回（次数）</div>
+      <table class="dt-table">
+        <thead><tr><th>次数</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-kpwrap">1回<span class="dt-kp">考点</span></td><td class="dt-sp">いっかい</td></tr>
+          <tr><td>2回〜9回</td><td>にかい・さんかい・よんかい・ごかい・ろっかい・ななかい・はちかい・きゅうかい</td></tr>
+          <tr><td class="dt-kpwrap">6回<span class="dt-kp">考点</span></td><td class="dt-sp">ろっかい</td></tr>
+          <tr><td class="dt-kpwrap">10回<span class="dt-kp">考点</span></td><td class="dt-sp">じゅっかい</td></tr>
+          <tr><td>疑问</td><td>何回　なんかい</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">注意「回」和「階」的读音<b>写法不同但发音规律相同</b>（かい），做题时容易和楼层搞混，靠上下文语境区分。</div>
+
+      <div class="dt-h">⑨ 台（机器、车辆）</div>
+      <table class="dt-table">
+        <thead><tr><th>数量</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td>1〜10台</td><td>いちだい・にだい・さんだい・よんだい・ごだい・ろくだい・ななだい・はちだい・きゅうだい・じゅうだい</td></tr>
+          <tr><td>疑问</td><td>何台　なんだい</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">「台」<b>全程规则</b>，没有音变，和「枚」一样是省心的一个。</div>
+
+      <div class="dt-h">⑩ 歳／才（年龄）</div>
+      <table class="dt-table">
+        <thead><tr><th>年龄</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-kpwrap">1歳<span class="dt-kp">考点</span></td><td class="dt-sp">いっさい</td></tr>
+          <tr><td>2歳〜9歳</td><td>にさい・さんさい・よんさい・ごさい・ろくさい・ななさい・はっさい・きゅうさい</td></tr>
+          <tr><td class="dt-kpwrap">8歳<span class="dt-kp">考点</span></td><td class="dt-sp">はっさい</td></tr>
+          <tr><td class="dt-kpwrap">20歳<span class="dt-kp">考点</span></td><td class="dt-sp">はたち</td></tr>
+          <tr><td>疑问</td><td>何歳／おいくつ　なんさい（几岁，おいくつ更礼貌）</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip"><b>20歳＝はたち，完全独立的特殊读法</b>，和「にじゅっさい」的规则读法脱钩，是年龄题的最大陷阱，务必单独死记。</div>
+    </div>
+  </div>
+
+    <div class="dt-sec-h" id="dt-sec-counter">🔠 助数词大全（N5 数量词）</div>
+    <div class="dt-card">
+      <div class="dt-note">助数词是数字类考题<b>覆盖面最广</b>的部分，规律和「分・本・階・匹」这类促音/半浊音变化高度相似，抓住规律比死记每一个更有效。</div>
+      <div class="dt-h">① つ（泛用量词，数东西）</div>
+      <table class="dt-table">
+        <thead><tr><th>数量</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-kpwrap">1つ<span class="dt-kp">考点</span></td><td class="dt-sp">ひとつ</td></tr>
+          <tr><td class="dt-kpwrap">2つ<span class="dt-kp">考点</span></td><td class="dt-sp">ふたつ</td></tr>
+          <tr><td>3つ</td><td>みっつ</td></tr>
+          <tr><td>4つ</td><td>よっつ</td></tr>
+          <tr><td>5つ</td><td>いつつ</td></tr>
+          <tr><td>6つ</td><td>むっつ</td></tr>
+          <tr><td>7つ</td><td>ななつ</td></tr>
+          <tr><td>8つ</td><td>やっつ</td></tr>
+          <tr><td>9つ</td><td>ここのつ</td></tr>
+          <tr><td class="dt-kpwrap">10<span class="dt-kp">考点</span></td><td class="dt-sp">とお（不加つ！）</td></tr>
+          <tr><td>疑问</td><td>いくつ（几个）</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">整套是独立的和语训读，1-10 <b>全部要单独背</b>，11以后基本不用「つ」了，改用「じゅういち」等数字直接数。<b>10 是「とお」，不带つ</b>，是最容易忘的一个。</div>
+
+      <div class="dt-h">② 人（数人数）</div>
+      <table class="dt-table">
+        <thead><tr><th>人数</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-kpwrap">1人<span class="dt-kp">考点</span></td><td class="dt-sp">ひとり</td></tr>
+          <tr><td class="dt-kpwrap">2人<span class="dt-kp">考点</span></td><td class="dt-sp">ふたり</td></tr>
+          <tr><td>3人</td><td>さんにん</td></tr>
+          <tr><td class="dt-kpwrap">4人<span class="dt-kp">考点</span></td><td class="dt-sp">よにん</td></tr>
+          <tr><td>5人〜9人</td><td>ごにん・ろくにん・しちにん／ななにん・はちにん・きゅうにん</td></tr>
+          <tr><td>10人</td><td>じゅうにん</td></tr>
+          <tr><td>疑问</td><td>何人　なんにん</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">口诀：<b>只有 1人ひとり・2人ふたり 是特殊训读</b>，3人开始全部是「数字＋にん」的规则读法（4人よにん 沿用よ系）。</div>
+
+      <div class="dt-h">③ 本（细长物：笔、瓶、伞等）</div>
+      <table class="dt-table">
+        <thead><tr><th>数量</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-kpwrap">1本<span class="dt-kp">考点</span></td><td class="dt-sp">いっぽん</td></tr>
+          <tr><td>2本</td><td>にほん</td></tr>
+          <tr><td class="dt-kpwrap">3本<span class="dt-kp">考点</span></td><td class="dt-sp">さんぼん</td></tr>
+          <tr><td>4本</td><td>よんほん</td></tr>
+          <tr><td>5本</td><td>ごほん</td></tr>
+          <tr><td class="dt-kpwrap">6本<span class="dt-kp">考点</span></td><td class="dt-sp">ろっぽん</td></tr>
+          <tr><td>7本</td><td>ななほん</td></tr>
+          <tr><td class="dt-kpwrap">8本<span class="dt-kp">考点</span></td><td class="dt-sp">はっぽん</td></tr>
+          <tr><td>9本</td><td>きゅうほん</td></tr>
+          <tr><td class="dt-kpwrap">10本<span class="dt-kp">考点</span></td><td class="dt-sp">じゅっぽん</td></tr>
+          <tr><td>疑问</td><td>何本　なんぼん</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">「本」是所有促音/半浊音变化助数词的<b>模板规律</b>：<b>1・6・8・10 → っ＋ぽん；3 → んぼん（浊音）；其余 → ほん</b>。下面的「階・匹」都遵循同一套规律。</div>
+
+      <div class="dt-h">④ 階（楼层）</div>
+      <table class="dt-table">
+        <thead><tr><th>楼层</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-kpwrap">1階<span class="dt-kp">考点</span></td><td class="dt-sp">いっかい</td></tr>
+          <tr><td>2階</td><td>にかい</td></tr>
+          <tr><td class="dt-kpwrap">3階<span class="dt-kp">考点</span></td><td class="dt-sp">さんがい</td></tr>
+          <tr><td>4階</td><td>よんかい</td></tr>
+          <tr><td>5階</td><td>ごかい</td></tr>
+          <tr><td class="dt-kpwrap">6階<span class="dt-kp">考点</span></td><td class="dt-sp">ろっかい</td></tr>
+          <tr><td>7階</td><td>ななかい</td></tr>
+          <tr><td class="dt-kpwrap">8階<span class="dt-kp">考点</span></td><td class="dt-sp">はっかい</td></tr>
+          <tr><td>9階</td><td>きゅうかい</td></tr>
+          <tr><td class="dt-kpwrap">10階<span class="dt-kp">考点</span></td><td class="dt-sp">じゅっかい</td></tr>
+          <tr><td>疑问</td><td>何階　なんがい</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">同「本」的规律：<b>1・6・8・10 促音化；3 浊音化（さんがい，不是さんかい！）</b>。这个「3階」是 N5 听力最爱挖的坑之一。</div>
+
+      <div class="dt-h">⑤ 匹（小动物：猫、狗、鱼等）</div>
+      <table class="dt-table">
+        <thead><tr><th>数量</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-kpwrap">1匹<span class="dt-kp">考点</span></td><td class="dt-sp">いっぴき</td></tr>
+          <tr><td>2匹</td><td>にひき</td></tr>
+          <tr><td class="dt-kpwrap">3匹<span class="dt-kp">考点</span></td><td class="dt-sp">さんびき</td></tr>
+          <tr><td>4匹</td><td>よんひき</td></tr>
+          <tr><td>5匹</td><td>ごひき</td></tr>
+          <tr><td class="dt-kpwrap">6匹<span class="dt-kp">考点</span></td><td class="dt-sp">ろっぴき</td></tr>
+          <tr><td>7匹</td><td>ななひき</td></tr>
+          <tr><td class="dt-kpwrap">8匹<span class="dt-kp">考点</span></td><td class="dt-sp">はっぴき</td></tr>
+          <tr><td>9匹</td><td>きゅうひき</td></tr>
+          <tr><td class="dt-kpwrap">10匹<span class="dt-kp">考点</span></td><td class="dt-sp">じゅっぴき</td></tr>
+          <tr><td>疑问</td><td>何匹　なんびき</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">和「本・階」完全同规律：<b>1・6・8・10 促音化；3 浊音化</b>。三个助数词一起记，规律记一次就够了。</div>
+
+      <div class="dt-h">⑥ 枚（薄片物：纸、票、盘子等）</div>
+      <table class="dt-table">
+        <thead><tr><th>数量</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td>1〜10枚</td><td>いちまい・にまい・さんまい・よんまい・ごまい・ろくまい・ななまい・はちまい・きゅうまい・じゅうまい</td></tr>
+          <tr><td>疑问</td><td>何枚　なんまい</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">「枚」<b>全程规则，没有促音/浊音变化</b>，是助数词里最好背的一个，直接数字＋まい即可。</div>
+
+      <div class="dt-h">⑦ 冊（书、笔记本等装订物）</div>
+      <table class="dt-table">
+        <thead><tr><th>数量</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-kpwrap">1冊<span class="dt-kp">考点</span></td><td class="dt-sp">いっさつ</td></tr>
+          <tr><td>2冊〜9冊</td><td>にさつ・さんさつ・よんさつ・ごさつ・ろくさつ・ななさつ・はっさつ・きゅうさつ</td></tr>
+          <tr><td class="dt-kpwrap">8冊<span class="dt-kp">考点</span></td><td class="dt-sp">はっさつ</td></tr>
+          <tr><td class="dt-kpwrap">10冊<span class="dt-kp">考点</span></td><td class="dt-sp">じゅっさつ</td></tr>
+          <tr><td>疑问</td><td>何冊　なんさつ</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">只有 <b>1・8・10 促音化</b>（っ＋さつ），没有浊音变化（不像本/階/匹有さ→ざ的情况），相对好记。</div>
+
+      <div class="dt-h">⑧ 回（次数）</div>
+      <table class="dt-table">
+        <thead><tr><th>次数</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-kpwrap">1回<span class="dt-kp">考点</span></td><td class="dt-sp">いっかい</td></tr>
+          <tr><td>2回〜9回</td><td>にかい・さんかい・よんかい・ごかい・ろっかい・ななかい・はちかい・きゅうかい</td></tr>
+          <tr><td class="dt-kpwrap">6回<span class="dt-kp">考点</span></td><td class="dt-sp">ろっかい</td></tr>
+          <tr><td class="dt-kpwrap">10回<span class="dt-kp">考点</span></td><td class="dt-sp">じゅっかい</td></tr>
+          <tr><td>疑问</td><td>何回　なんかい</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">注意「回」和「階」的读音<b>写法不同但发音规律相同</b>（かい），做题时容易和楼层搞混，靠上下文语境区分。</div>
+
+      <div class="dt-h">⑨ 台（机器、车辆）</div>
+      <table class="dt-table">
+        <thead><tr><th>数量</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td>1〜10台</td><td>いちだい・にだい・さんだい・よんだい・ごだい・ろくだい・ななだい・はちだい・きゅうだい・じゅうだい</td></tr>
+          <tr><td>疑问</td><td>何台　なんだい</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip">「台」<b>全程规则</b>，没有音变，和「枚」一样是省心的一个。</div>
+
+      <div class="dt-h">⑩ 歳／才（年龄）</div>
+      <table class="dt-table">
+        <thead><tr><th>年龄</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td class="dt-kpwrap">1歳<span class="dt-kp">考点</span></td><td class="dt-sp">いっさい</td></tr>
+          <tr><td>2歳〜9歳</td><td>にさい・さんさい・よんさい・ごさい・ろくさい・ななさい・はっさい・きゅうさい</td></tr>
+          <tr><td class="dt-kpwrap">8歳<span class="dt-kp">考点</span></td><td class="dt-sp">はっさい</td></tr>
+          <tr><td class="dt-kpwrap">20歳<span class="dt-kp">考点</span></td><td class="dt-sp">はたち</td></tr>
+          <tr><td>疑问</td><td>何歳／おいくつ　なんさい（几岁，おいくつ更礼貌）</td></tr>
+        </tbody>
+      </table>
+      <div class="dt-tip"><b>20歳＝はたち，完全独立的特殊读法</b>，和「にじゅっさい」的规则读法脱钩，是年龄题的最大陷阱，务必单独死记。</div>
+    </div>
+  </div>
+
+  <!-- 翻卡自测视图 -->
+  <div id="dt-quiz" class="dt-view" style="display:none">
+    <div class="dt-setup" id="dt-setup">
+      <h2>🎯 翻卡自测</h2>
+      <p>选一个范围，卡片正面是题目，点击翻面看答案，自己判断对错。</p>
+      <div class="dt-lbl">范围</div>
+      <div class="dt-opts" id="dt-scope">
+        <div class="dt-chip on" data-v="all" onclick="dtPick(this)">全部</div>
+        <div class="dt-chip" data-v="49" onclick="dtPick(this)">4·7·9 读法</div>
+        <div class="dt-chip" data-v="day" onclick="dtPick(this)">1-31日 读法</div>
+        <div class="dt-chip" data-v="trap" onclick="dtPick(this)">⭐ 只练高频坑</div>
+      </div>
+      <button class="dt-go" onclick="dtStart()">🚀 开始翻卡</button>
+    </div>
+
+    <div id="dt-main" style="display:none">
+      <div class="dt-meta"><span id="dt-prog">1/20</span><span id="dt-scoretxt">✅0 ❌0</span></div>
+      <div class="dt-pbar"><div class="dt-pfill" id="dt-pfill"></div></div>
+      <div class="dt-flip" id="dt-flip" onclick="dtFlip()">
+        <div class="dt-face dt-front" id="dt-front"></div>
+        <div class="dt-face dt-back" id="dt-back" style="display:none"></div>
+      </div>
+      <div class="dt-hint" id="dt-hint">👆 点击卡片查看答案</div>
+      <div class="dt-judge" id="dt-judge" style="display:none">
+        <button class="dt-jbtn dt-jno" onclick="dtJudge(false)">❌ 没记住</button>
+        <button class="dt-jbtn dt-jok" onclick="dtJudge(true)">✅ 记住了</button>
+      </div>
+    </div>
+
+    <div id="dt-result" style="display:none" class="dt-result">
+      <div style="font-size:46px" id="dt-em">🎉</div>
+      <div class="dt-sc" id="dt-rsc"></div>
+      <div class="dt-rmsg" id="dt-rmsg"></div>
+      <div class="dt-rwrong" id="dt-rwrong"></div>
+      <div class="dt-acts">
+        <button class="dt-retry" onclick="dtStart()">再翻一轮</button>
+        <button class="dt-back2" onclick="dtBack()">换范围</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <script>
+// ══════════════════════════════════════════════
+// 已掌握单词 · 共享存储（动词/形容词/背单词三处共用）
+// ══════════════════════════════════════════════
+const WDMKEY='n5_wd_mastered';
+let wdMastered={};try{wdMastered=JSON.parse(localStorage.getItem(WDMKEY)||'{}');}catch(e){wdMastered={};}
+function wdKey(w){return w.k+'|'+w.disp+'|'+w.read;}
+function wdSaveMastered(){try{localStorage.setItem(WDMKEY,JSON.stringify(wdMastered));}catch(e){}}
+function wdIsMastered(k,disp,read){return !!wdMastered[k+'|'+disp+'|'+read];}
+function wdToggleWord(k,disp,read,mean){
+  const key=k+'|'+disp+'|'+read;
+  if(wdMastered[key])delete wdMastered[key];
+  else wdMastered[key]={disp,read,mean,k};
+  wdSaveMastered();
+}
+
 // ══════════════════════════════════════════════
 // 动词数据 [ます形, 原型, 注音, 中文, 类别]
 // ══════════════════════════════════════════════
@@ -685,7 +1334,7 @@ function conjAdj(word,type){
 // ══════════════════════════════════════════════
 function switchMain(tab){
   document.querySelectorAll('.main-tab').forEach((b,i)=>{
-    b.classList.toggle('active',['verb','adj','word','quiz','point','joshi'][i]===tab);
+    b.classList.toggle('active',['verb','adj','word','quiz','point','joshi','date'][i]===tab);
   });
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+tab).classList.add('active');
@@ -731,19 +1380,49 @@ function vtoggle(v,i){
   if(document.getElementById('vd-'+i)){vcloseDet(i);return;}
   vopenDet(v,i);
 }
+let vCurFilter='all';
 function renderVerbs(f){
+  if(f!==undefined)vCurFilter=f;
   if(vopenIdx!==null)vcloseDet(vopenIdx);
-  const list=VERBS.map((v,i)=>({v,i})).filter(({v})=>f==='all'||v[4]===f);
+  const list=VERBS.map((v,i)=>({v,i})).filter(({v})=>vCurFilter==='all'||v[4]===vCurFilter);
   document.getElementById('vcount').textContent=`显示 ${list.length} 个动词`;
   const tb=document.getElementById('vtbody');tb.innerHTML='';
   list.forEach(({v,i},n)=>{
     const bc=v[4]==='一类'?'b1':v[4]==='二类'?'b2':'b3';
     const bl=v[4]==='一类'?'一类（五段）':v[4]==='二类'?'二类（一段）':'三类（不规则）';
-    const tr=document.createElement('tr');tr.className='jrow';tr.id='vr-'+i;
-    tr.innerHTML=`<td class="num">${n+1}</td><td class="jword">${v[0]}</td><td><div class="jword" style="font-size:13px">${v[1]}</div><div class="jread">${v[2]}</div></td><td class="jmean">${v[3]}</td><td><span class="badge ${bc}">${bl}</span></td>`;
+    const mastered=wdIsMastered('动词',v[1],v[2]);
+    const tr=document.createElement('tr');tr.className='jrow'+(mastered?' mastered':'');tr.id='vr-'+i;
+    tr.innerHTML=`<td class="num">${n+1}</td><td class="jword">${v[0]}</td><td><div class="jword" style="font-size:13px">${v[1]}</div><div class="jread">${v[2]}</div></td><td class="jmean">${v[3]}</td><td><span class="badge ${bc}">${bl}</span></td><td><button class="mbtn ${mastered?'on':''}" data-i="${i}">${mastered?'✓':'掌握'}</button></td>`;
     tr.addEventListener('click',()=>vtoggle(v,i));
+    tr.querySelector('.mbtn').addEventListener('click',(ev)=>{ev.stopPropagation();vMaster(v,i);});
     tb.appendChild(tr);
   });
+  updateVmCount();
+}
+function vMaster(v,i){
+  wdToggleWord('动词',v[1],v[2],v[3]);
+  renderVerbs();
+}
+function updateVmCount(){
+  const el=document.getElementById('vm-count');
+  if(el)el.textContent=VERBS.filter(v=>wdIsMastered('动词',v[1],v[2])).length;
+}
+function vToggleMlist(){
+  const box=document.getElementById('vm-list');
+  const showing=box.style.display==='block';
+  box.style.display=showing?'none':'block';
+  document.getElementById('vm-toggle').firstChild.textContent=showing?'📋 查看已掌握动词（':'收起列表（';
+  if(!showing)vRenderMlist();
+}
+function vRenderMlist(){
+  const box=document.getElementById('vm-list');
+  const items=VERBS.filter(v=>wdIsMastered('动词',v[1],v[2]));
+  if(!items.length){box.innerHTML='<div class="vm-empty">还没有标记已掌握的动词</div>';return;}
+  box.innerHTML=items.map(v=>`<div class="vm-item"><div class="vm-txt"><b>${v[1]}</b>　${v[2]}　${v[3]}</div><button class="vm-cancel" onclick="vUnmaster('${v[1]}','${v[2]}')">取消</button></div>`).join('');
+}
+function vUnmaster(disp,read){
+  wdToggleWord('动词',disp,read,'');
+  vRenderMlist();renderVerbs();
 }
 document.querySelectorAll('#vfilter .fchip').forEach(c=>{
   c.addEventListener('click',()=>{
@@ -789,19 +1468,50 @@ function atoggle(a,i){
   if(document.getElementById('ad-'+i)){acloseDet(i);return;}
   aopenDet(a,i);
 }
+let aCurFilter='all';
 function renderAdjs(f){
+  if(f!==undefined)aCurFilter=f;
   if(aopenIdx!==null)acloseDet(aopenIdx);
-  const list=ADJS.map((a,i)=>({a,i})).filter(({a})=>f==='all'||a[3]===f);
+  const list=ADJS.map((a,i)=>({a,i})).filter(({a})=>aCurFilter==='all'||a[3]===aCurFilter);
   document.getElementById('acount').textContent=`显示 ${list.length} 个形容词`;
   const tb=document.getElementById('atbody');tb.innerHTML='';
   list.forEach(({a,i},n)=>{
     const bc=a[3]==='イ形'?'bi':'bn';
     const tr=document.createElement('tr');tr.className='jrow';tr.id='ar-'+i;
     const antCell=a[4]?`<td><span class="jant">↔ ${a[4]}</span></td>`:'<td></td>';
-    tr.innerHTML=`<td class="num">${n+1}</td><td class="jword" style="font-size:15px">${a[0]}</td><td class="jread">${a[1]}</td><td class="jmean">${a[2]}</td>${antCell}<td><span class="badge ${bc}">${a[3]}</span></td>`;
+    const mastered=wdIsMastered('形容词',a[0],a[1]);
+    if(mastered)tr.classList.add('mastered');
+    tr.innerHTML=`<td class="num">${n+1}</td><td class="jword" style="font-size:15px">${a[0]}</td><td class="jread">${a[1]}</td><td class="jmean">${a[2]}</td>${antCell}<td><span class="badge ${bc}">${a[3]}</span></td><td><button class="mbtn ${mastered?'on':''}" data-i="${i}">${mastered?'✓':'掌握'}</button></td>`;
     tr.addEventListener('click',()=>atoggle(a,i));
+    tr.querySelector('.mbtn').addEventListener('click',(ev)=>{ev.stopPropagation();aMaster(a,i);});
     tb.appendChild(tr);
   });
+  updateAmCount();
+}
+function aMaster(a,i){
+  wdToggleWord('形容词',a[0],a[1],a[2]);
+  renderAdjs();
+}
+function updateAmCount(){
+  const el=document.getElementById('am-count');
+  if(el)el.textContent=ADJS.filter(a=>wdIsMastered('形容词',a[0],a[1])).length;
+}
+function aToggleMlist(){
+  const box=document.getElementById('am-list');
+  const showing=box.style.display==='block';
+  box.style.display=showing?'none':'block';
+  document.getElementById('am-toggle').firstChild.textContent=showing?'📋 查看已掌握形容词（':'收起列表（';
+  if(!showing)aRenderMlist();
+}
+function aRenderMlist(){
+  const box=document.getElementById('am-list');
+  const items=ADJS.filter(a=>wdIsMastered('形容词',a[0],a[1]));
+  if(!items.length){box.innerHTML='<div class="vm-empty">还没有标记已掌握的形容词</div>';return;}
+  box.innerHTML=items.map(a=>`<div class="vm-item"><div class="vm-txt"><b>${a[0]}</b>　${a[1]}　${a[2]}</div><button class="vm-cancel" onclick="aUnmaster('${a[0]}','${a[1]}')">取消</button></div>`).join('');
+}
+function aUnmaster(disp,read){
+  wdToggleWord('形容词',disp,read,'');
+  aRenderMlist();renderAdjs();
 }
 document.querySelectorAll('#afilter .fchip').forEach(c=>{
   c.addEventListener('click',()=>{
@@ -1116,10 +1826,6 @@ function wdPick(g,v,el){
   el.classList.add('on');
   if(g==='scope')wdScope=v;else wdType=v;
 }
-const WDMKEY='n5_wd_mastered';
-let wdMastered={};try{wdMastered=JSON.parse(localStorage.getItem(WDMKEY)||'{}');}catch(e){wdMastered={};}
-function wdKey(w){return w.k+'|'+w.disp+'|'+w.read;}
-function wdSaveMastered(){try{localStorage.setItem(WDMKEY,JSON.stringify(wdMastered));}catch(e){}}
 function wdPool(scope){
   let a=[];
   if(scope!=='adj')VERBS.forEach(v=>a.push({disp:v[1],read:v[2],mean:v[3],k:'动词'}));
@@ -1356,6 +2062,132 @@ function jsBack(){
 
 /* 初始化新模块 */
 kpRender();jsBuildCats();
+
+
+/* ════ 数字·日期模块 ════ */
+// 1-31日读法数据: [日, 读法, 类型] 类型: 1=1-10特殊训读 2=11日后的高频坑(14/19/20/24/29) 0=规则读法
+const DTDAYS=[
+ [1,"ついたち",1],[2,"ふつか",1],[3,"みっか",1],[4,"よっか",1],[5,"いつか",1],
+ [6,"むいか",1],[7,"なのか",1],[8,"ようか",1],[9,"ここのか",1],[10,"とおか",1],
+ [11,"じゅういちにち",0],[12,"じゅうににち",0],[13,"じゅうさんにち",0],[14,"じゅうよっか",2],[15,"じゅうごにち",0],
+ [16,"じゅうろくにち",0],[17,"じゅうしちにち",0],[18,"じゅうはちにち",0],[19,"じゅうくにち",2],[20,"はつか",2],
+ [21,"にじゅういちにち",0],[22,"にじゅうににち",0],[23,"にじゅうさんにち",0],[24,"にじゅうよっか",2],[25,"にじゅうごにち",0],
+ [26,"にじゅうろくにち",0],[27,"にじゅうしちにち",0],[28,"にじゅうはちにち",0],[29,"にじゅうくにち",2],[30,"さんじゅうにち",0],
+ [31,"さんじゅういちにち",0]
+];
+// 4/7/9读法翻卡题: [题面, 答案, 说明, 是否高频坑]
+const DT49=[
+ ["4月　怎么读？","しがつ","唯一用「し」的特例",1],
+ ["4時　怎么读？","よじ","短读「よ」，不是よんじ",1],
+ ["4人　怎么读？","よにん","注意不是よんにん",1],
+ ["4日　怎么读？","よっか","よ系促音",1],
+ ["4分　怎么读？","よんぷん","规则读法：よん＋分",0],
+ ["4本　怎么读？","よんほん","规则读法：よん＋本",0],
+ ["4枚　怎么读？","よんまい","规则读法：よん＋枚",0],
+ ["7月　怎么读？","しちがつ","固定用しち",1],
+ ["7時　怎么读？","しちじ","固定用しち",1],
+ ["7日　怎么读？","なのか","な系，特殊训读",1],
+ ["7分　怎么读？","ななふん","规则读法：なな＋分",0],
+ ["7本　怎么读？","ななほん","规则读法：なな＋本",0],
+ ["9月　怎么读？","くがつ","特例，必记",1],
+ ["9時　怎么读？","くじ","特例，必记",1],
+ ["9時間　怎么读？","くじかん","特例，必记",1],
+ ["9分　怎么读？","きゅうふん","规则读法：きゅう＋分",0],
+ ["9本　怎么读？","きゅうほん","规则读法：きゅう＋本",0],
+];
+
+function dtSwitch(v,el){
+  document.querySelectorAll('.dt-segbtn').forEach(x=>x.classList.remove('on'));
+  el.classList.add('on');
+  document.getElementById('dt-ref').style.display=v==='ref'?'block':'none';
+  document.getElementById('dt-quiz').style.display=v==='quiz'?'block':'none';
+}
+function dtJump(id){
+  const el=document.getElementById(id);
+  if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function dtRenderDayGrid(){
+  const box=document.getElementById('dt-daygrid');
+  if(!box||box.children.length)return;
+  box.innerHTML=DTDAYS.map(d=>{
+    const trap=d[2]===2?' trap':'';
+    return '<div class="dt-dcell'+trap+'"><div class="dt-dnum">'+d[0]+'日</div><div class="dt-dread">'+d[1]+'</div></div>';
+  }).join('');
+}
+dtRenderDayGrid();
+
+/* 翻卡自测 */
+let dtScope='all',dtList=[],dtIdx=0,dtOk=0,dtNg=0,dtFlipped=false,dtWrongList=[];
+function dtPick(el){
+  document.querySelectorAll('#dt-scope .dt-chip').forEach(x=>x.classList.remove('on'));
+  el.classList.add('on');dtScope=el.dataset.v;
+}
+function dtBuildDeck(){
+  let deck=[];
+  if(dtScope==='all'||dtScope==='49'){
+    DT49.forEach(q=>deck.push({front:q[0],back:q[1],sub:q[2],trap:q[3]===1}));
+  }
+  if(dtScope==='all'||dtScope==='day'){
+    DTDAYS.forEach(d=>deck.push({front:d[0]+'日　怎么读？',back:d[1],sub:d[2]===1?'1-10特殊训读':d[2]===2?'⭐ 高频坑':'11日后规则：数字音读＋にち',trap:d[2]>0}));
+  }
+  if(dtScope==='trap'){
+    DT49.filter(q=>q[3]===1).forEach(q=>deck.push({front:q[0],back:q[1],sub:q[2],trap:true}));
+    DTDAYS.filter(d=>d[2]===2).forEach(d=>deck.push({front:d[0]+'日　怎么读？',back:d[1],sub:'⭐ 高频坑',trap:true}));
+  }
+  return shuffle(deck);
+}
+function dtStart(){
+  dtList=dtBuildDeck();
+  if(!dtList.length){alert('该范围没有题目。');return;}
+  dtIdx=0;dtOk=0;dtNg=0;dtWrongList=[];
+  document.getElementById('dt-setup').style.display='none';
+  document.getElementById('dt-result').style.display='none';
+  document.getElementById('dt-main').style.display='block';
+  dtShow();
+}
+function dtShow(){
+  dtFlipped=false;
+  const q=dtList[dtIdx];
+  document.getElementById('dt-prog').textContent=(dtIdx+1)+'/'+dtList.length;
+  document.getElementById('dt-scoretxt').textContent='✅'+dtOk+' ❌'+dtNg;
+  document.getElementById('dt-pfill').style.width=(dtIdx/dtList.length*100)+'%';
+  document.getElementById('dt-front').textContent=q.front;
+  document.getElementById('dt-front').style.display='block';
+  document.getElementById('dt-back').style.display='none';
+  document.getElementById('dt-back').innerHTML=q.back+'<div class="sub">'+q.sub+'</div>';
+  document.getElementById('dt-hint').style.display='block';
+  document.getElementById('dt-judge').style.display='none';
+}
+function dtFlip(){
+  if(dtFlipped)return;dtFlipped=true;
+  document.getElementById('dt-front').style.display='none';
+  document.getElementById('dt-back').style.display='block';
+  document.getElementById('dt-hint').style.display='none';
+  document.getElementById('dt-judge').style.display='flex';
+}
+function dtJudge(ok){
+  const q=dtList[dtIdx];
+  if(ok)dtOk++;else{dtNg++;dtWrongList.push(q);}
+  dtIdx++;
+  if(dtIdx>=dtList.length)dtRes();else dtShow();
+}
+function dtRes(){
+  document.getElementById('dt-main').style.display='none';
+  document.getElementById('dt-result').style.display='block';
+  const tot=dtOk+dtNg,pct=tot?Math.round(dtOk/tot*100):0;
+  document.getElementById('dt-rsc').textContent='✅ '+dtOk+' / ❌ '+dtNg;
+  const m=[[90,'🏆','全都记牢了，考试稳了！'],[70,'🎉','大部分掌握了！'],[50,'👍','还有一半要巩固。'],[0,'💪','这些坑得再多翻几轮。']];
+  const r=m.find(x=>pct>=x[0]);
+  document.getElementById('dt-em').textContent=r[1];
+  document.getElementById('dt-rmsg').textContent=r[2];
+  const wd=document.getElementById('dt-rwrong');
+  wd.innerHTML=dtWrongList.length?'<h3>❌ 没记住的（'+dtWrongList.length+'）</h3>'+dtWrongList.map(x=>'<div class="dt-witem">'+x.front+'　→　<b>'+x.back+'</b>　'+x.sub+'</div>').join(''):'<div style="color:#10b981;font-weight:700;text-align:center;margin-top:10px">全部记住了！👏</div>';
+}
+function dtBack(){
+  document.getElementById('dt-result').style.display='none';
+  document.getElementById('dt-main').style.display='none';
+  document.getElementById('dt-setup').style.display='block';
+}
 
 </script>
 </body>
